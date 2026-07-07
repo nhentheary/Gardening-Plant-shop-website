@@ -3,7 +3,7 @@
 
     /* ── NAVBAR ── */
     .navbar {
-    background: var(--color-cream);
+    background: var(--color-dark-green);
     padding: 0 48px;
     height: 64px;
     display: flex;
@@ -11,7 +11,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 0.5px solid var(--color-warm-beige);
+   
     }
 
     .navbar-logo {

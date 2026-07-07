@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plantora — Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantora — Home</title>
 
-  <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
 
-  <!-- CSS: always this order -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/home.css">
+    <!-- CSS: always this order -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar">
     <a href="index.html" class="navbar-logo">
         <div class="navbar-logo-icon">
@@ -58,10 +57,274 @@
 
     <!-- PAGE CONTENT -->
     <main>
-        ...
-    </main>
 
-  <!-- FOOTER -->
+    <!-- ── SECTION 1: HERO ── -->
+    <section class="hero">
+        <img src="images/hero/hero-home.jpg" alt="Beautiful indoor plants in a modern home" class="hero-bg">
+        <div class="hero-content">
+        <h1 class="hero-title">
+            Bring <em>Nature</em><br>Into Your Home
+        </h1>
+        <p class="hero-subtitle">
+            Rooted in love. Grown with care. Find your next favourite
+            plant and let it change the way you see your space.
+        </p>
+        <div class="hero-buttons">
+            <a href="html/shop.html" class="btn-pill btn-pill-filled">Shop Now</a>
+            <a href="html/about.html" class="btn-pill btn-pill-outline">Our Story</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- ── SECTION 2: WHY SHOP WITH US ── -->
+    <section class="why-section">
+        <div class="container">
+        <div class="why-header text-center">
+            <h2 class="section-title">Why Shop With Plantora?</h2>
+            <p class="section-subtitle">From your screen to your space, we make plant shopping simple, smooth, and stress-free.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+            <div class="why-icon"><i class="ti ti-truck"></i></div>
+            <h3>Free and Fast Delivery</h3>
+            <p>Fresh plants delivered straight to your door — free on orders over $50.</p>
+            </div>
+            <div class="why-center-img">
+            <img src="images/hero/hero-home.jpg" alt="Plantora plant" class="why-plant-img">
+            </div>
+            <div class="why-card">
+            <div class="why-icon"><i class="ti ti-headset"></i></div>
+            <h3>Customer Support</h3>
+            <p>Our team is always here to help you — anytime, day or night.</p>
+            </div>
+            <div class="why-card why-card-bottom-left">
+            <div class="why-icon"><i class="ti ti-rotate"></i></div>
+            <h3>Hassle-Free Returns</h3>
+            <p>Changed your mind? Return it within 30 days, no stress.</p>
+            </div>
+            <div class="why-card why-card-bottom-right">
+            <div class="why-icon"><i class="ti ti-shield-check"></i></div>
+            <h3>Secure Payments</h3>
+            <p>Pay safely with 100% encrypted checkout.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ── SECTION 3: CATEGORY BANNER ── -->
+    <section class="category-banner">
+        <div class="container">
+        <div class="category-grid">
+            <div class="category-card category-indoor">
+            <div class="category-tag">Indoors</div>
+            <h3>Low-Maintenance Plants</h3>
+            <p>Discover low-maintenance indoor plants that bring freshness, beauty, and a calming green touch to homes, offices, and small spaces.</p>
+            <a href="html/shop.html" class="btn-pill btn-pill-filled-sm">Explore Now</a>
+            <img src="images/plants/monstera.jpg" alt="Indoor plant" class="category-img">
+            </div>
+            <div class="category-card category-outdoor">
+            <div class="category-tag">Outdoors</div>
+            <h3>Hard-Maintenance Plants</h3>
+            <p>Explore hardy outdoor plants that require more care and attention, perfect for experienced gardeners who enjoy a rewarding challenge.</p>
+            <a href="html/shop.html" class="btn-pill btn-pill-filled-sm">Explore Now</a>
+            <img src="images/plants/snake-plant.jpg" alt="Outdoor plant" class="category-img">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ── SECTION 4: OUR FAVOURITE PLANTS ── -->
+    <section class="products-section">
+        <div class="container">
+        <div class="products-header text-center">
+            <h2 class="section-title">Our Favourite Plants</h2>
+            <p class="section-subtitle">Plants we love, chosen for their beauty and easy care.</p>
+        </div>
+
+        <!-- Tab filters -->
+        <div class="products-tabs">
+            <button class="tab-btn active" data-tab="all">All Plants</button>
+            <button class="tab-btn" data-tab="bestseller">Best Seller</button>
+            <button class="tab-btn" data-tab="onsale">On Sales</button>
+            <button class="tab-btn" data-tab="newarrivals">New Arrivals</button>
+        </div>
+
+        <!-- Product grid -->
+        <div class="products-grid" id="productsGrid">
+
+            <div class="product-card" data-category="bestseller">
+            <div class="product-img-wrap">
+                <span class="product-badge badge-best">Best</span>
+                <img src="images/plants/monstera.jpg" alt="Echeveria Elegans" class="product-img">
+                <button class="wishlist-btn"><i class="ti ti-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-name">Echeveria Elegans</h4>
+                <p class="product-desc">A classic rosette succulent, perfect for sunny spots.</p>
+                <div class="product-footer">
+                <span class="product-price">$5.90</span>
+                <div class="product-stars">
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star"></i>
+                    <span>4.0</span>
+                </div>
+                </div>
+                <button class="btn-add-cart"><i class="ti ti-shopping-cart"></i> Add to Cart</button>
+            </div>
+            </div>
+
+            <div class="product-card" data-category="newarrivals">
+            <div class="product-img-wrap">
+                <span class="product-badge badge-new">New</span>
+                <img src="images/plants/peace-lily.jpg" alt="Echeveria Elegans" class="product-img">
+                <button class="wishlist-btn"><i class="ti ti-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-name">Echeveria Elegans</h4>
+                <p class="product-desc">A classic rosette succulent, perfect for sunny spots.</p>
+                <div class="product-footer">
+                <span class="product-price">$5.90</span>
+                <div class="product-stars">
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star"></i>
+                    <span>4.0</span>
+                </div>
+                </div>
+                <button class="btn-add-cart"><i class="ti ti-shopping-cart"></i> Add to Cart</button>
+            </div>
+            </div>
+
+            <div class="product-card" data-category="onsale">
+            <div class="product-img-wrap">
+                <span class="product-badge badge-sale">-20%</span>
+                <img src="images/plants/snake-plant.jpg" alt="Echeveria Elegans" class="product-img">
+                <button class="wishlist-btn"><i class="ti ti-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-name">Echeveria Elegans</h4>
+                <p class="product-desc">A classic rosette succulent, perfect for sunny spots.</p>
+                <div class="product-footer">
+                <div class="price-group">
+                    <span class="product-price">$5.90</span>
+                    <span class="product-price-old">$7.50</span>
+                </div>
+                <div class="product-stars">
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star"></i>
+                    <span>4.0</span>
+                </div>
+                </div>
+                <button class="btn-add-cart"><i class="ti ti-shopping-cart"></i> Add to Cart</button>
+            </div>
+            </div>
+
+            <div class="product-card" data-category="all">
+            <div class="product-img-wrap">
+                <img src="images/plants/pothos.jpg" alt="Echeveria Elegans" class="product-img">
+                <button class="wishlist-btn"><i class="ti ti-heart"></i></button>
+            </div>
+            <div class="product-info">
+                <h4 class="product-name">Echeveria Elegans</h4>
+                <p class="product-desc">A classic rosette succulent, perfect for sunny spots.</p>
+                <div class="product-footer">
+                <span class="product-price">$6.90</span>
+                <div class="product-stars">
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star"></i>
+                    <span>4.0</span>
+                </div>
+                </div>
+                <button class="btn-add-cart"><i class="ti ti-shopping-cart"></i> Add to Cart</button>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ── SECTION 5: PROMO BANNER ── -->
+    <section class="promo-banner">
+        <div class="promo-content">
+        <p class="promo-label">Fresh New Arrivals</p>
+        <h2 class="promo-title">Up to <span class="promo-percent">20%</span> off selected plants</h2>
+        <p class="promo-subtitle">Discover fresh plants to brighten your space. Carefully selected and ready for your home.</p>
+        <a href="html/shop.html" class="btn-pill btn-pill-filled-dark">Shop Now</a>
+        </div>
+        <div class="promo-img-wrap">
+        <img src="images/plants/monstera.jpg" alt="New arrival plant" class="promo-img">
+        </div>
+    </section>
+
+    <!-- ── SECTION 6: TESTIMONIALS ── -->
+    <section class="testimonials-section">
+        <div class="container">
+        <h2 class="section-title text-center">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+            <div class="testimonial-top">
+                <img src="images/team/member-1.jpg" alt="Sara S." class="testimonial-avatar">
+                <div class="testimonial-body">
+                <div class="testimonial-stars">
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i>
+                </div>
+                <p>"From browsing to delivery, the entire experience felt effortless and elevated. The collection is beautifully curated, making it easy to find plants that perfectly complement my space."</p>
+                </div>
+            </div>
+            <div class="testimonial-author">
+                <strong>Sara S.</strong>
+                <span>Phnom Penh</span>
+            </div>
+            </div>
+
+            <div class="testimonial-card">
+            <div class="testimonial-top">
+                <img src="images/team/member-2.jpg" alt="Emily" class="testimonial-avatar">
+                <div class="testimonial-body">
+                <div class="testimonial-stars">
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+                    <i class="ti ti-star-filled"></i>
+                </div>
+                <p>"Truly impressed by the attention to detail. Each plant arrived in pristine condition, carefully packaged to preserve its freshness and beauty. You can feel the care behind every order."</p>
+                </div>
+            </div>
+            <div class="testimonial-author">
+                <strong>Emily</strong>
+                <span>Siem Reap</span>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ── SECTION 7: NEWSLETTER ── -->
+    <section class="newsletter-section">
+        <div class="container">
+        <div class="newsletter-inner">
+            <div class="newsletter-text">
+            <h2>Stay in the Loop</h2>
+            <p>Get plant care tips, new arrivals, and exclusive deals in your inbox.</p>
+            </div>
+            <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email address" class="newsletter-input">
+            <button type="submit" class="btn-pill btn-pill-dark">Subscribe</button>
+            </form>
+            <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+        </div>
+        </div>
+    </section>
+
+</main>
+
+    <!-- FOOTER -->
 
     <footer class="footer">
     <div class="footer-grid">
@@ -104,7 +367,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2025 Plantora. All rights reserved.</p>
+        <p>© 2026 Plantora. All rights reserved.</p>
         <p>Made with 🌱 by the Plantora team</p>
     </div>
     </footer>
