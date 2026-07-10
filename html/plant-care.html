@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Care — Plantora</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom brand stylesheet (must load AFTER Bootstrap) -->
+  <link rel="stylesheet" href="../css/plant-care.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-brand-green py-3">
+    <div class="container">
+      <a class="navbar-brand brand" href="#"><i class="bi bi-flower1"></i> Plantora</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Plant Care</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3 nav-actions">
+          <div class="nav-search">
+            <i class="bi bi-search"></i>
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </div>
+          <a href="#" class="nav-icon" aria-label="Cart"><i class="bi bi-cart"></i></a>
+          <a href="#" class="nav-icon" aria-label="Account"><i class="bi bi-person"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero bg-brand-cream">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5 py-5">
+        <div class="col-12 col-lg-6 order-2 order-lg-1">
+          <p class="eyebrow">Plant Care</p>
+          <h1 class="hero-title">Grow with confidence</h1>
+          <p class="hero-sub">Simple, honest guides to make everything you buy from us thrive.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#guides" class="btn btn-primary rounded-pill px-4">Browse guides</a>
+            <a href="#" class="btn btn-outline-primary rounded-pill px-4">Shop plants</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <img src="https://unbeleafable.ph/wp-content/uploads/2023/05/woman-hands-spraying-leaves-of-green-plant-with-wa-2022-11-09-10-26-47-utc.jpg" alt="Person misting a healthy potted plant" class="hero-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEARCH + FILTERS ============ -->
+  <section class="filter-bar bg-brand-green py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center mb-3">
+        <div class="col-12 col-lg-7">
+          <div class="guide-search">
+            <i class="bi bi-search"></i>
+            <input type="search" class="form-control" placeholder="Search care guides" aria-label="Search care guides">
+          </div>
+        </div>
+        <div class="col-6 col-lg">
+          <select class="form-select brand-select" aria-label="Filter by difficulty">
+            <option selected>Difficulty</option>
+            <option>Easy</option><option>Medium</option><option>Hard</option>
+          </select>
+        </div>
+        <div class="col-6 col-lg">
+          <select class="form-select brand-select" aria-label="Filter by light">
+            <option selected>Light</option>
+            <option>Low light</option><option>Bright indirect</option><option>Full sun</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="chip active">All Plants</button>
+        <button class="chip">Indoor</button>
+        <button class="chip">Outdoor</button>
+        <button class="chip">Succulents</button>
+        <button class="chip">Flowering</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GUIDE CARDS ============ -->
+  <section class="guides py-5" id="guides">
+    <div class="container">
+      <h2 class="section-title mb-4">Browse care guides</h2>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card guide-card h-100">
+            <img src="https://i.pinimg.com/736x/49/35/0c/49350c0cbb35cb620b085ba6f08677df.jpg" class="card-img-top guide-img" alt="Snake plant in a pot" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="guide-title mb-0">Snake Plant</h3>
+                <span class="badge badge-easy">Easy</span>
+              </div>
+              <ul class="care-icons list-unstyled d-flex gap-2 mb-3">
+                <li><i class="bi bi-droplet"></i></li>
+                <li><i class="bi bi-sun"></i></li>
+                <li><i class="bi bi-cloud"></i></li>
+              </ul>
+              <p class="guide-desc">Nearly indestructible — thrives on neglect and low light.</p>
+              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto">View guide</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card guide-card h-100">
+            <img src="https://i.pinimg.com/736x/68/b9/21/68b9213c2c5fe9f5e4d7938b3ffb254e.jpg" class="card-img-top guide-img" alt="Monstera deliciosa plant" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="guide-title mb-0">Monstera</h3>
+                <span class="badge badge-medium">Medium</span>
+              </div>
+              <ul class="care-icons list-unstyled d-flex gap-2 mb-3">
+                <li><i class="bi bi-droplet"></i></li>
+                <li><i class="bi bi-sun"></i></li>
+                <li><i class="bi bi-cloud"></i></li>
+              </ul>
+              <p class="guide-desc">Loves bright, indirect light and a weekly drink of water.</p>
+              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto">View guide</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card guide-card h-100">
+            <img src="https://i.pinimg.com/1200x/8a/e5/76/8ae5761850d92c3873765f63bf179bf7.jpg" class="card-img-top guide-img" alt="Fiddle-leaf fig plant" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="guide-title mb-0">Fiddle-Leaf</h3>
+                <span class="badge badge-hard">Hard</span>
+              </div>
+              <ul class="care-icons list-unstyled d-flex gap-2 mb-3">
+                <li><i class="bi bi-droplet"></i></li>
+                <li><i class="bi bi-sun"></i></li>
+                <li><i class="bi bi-cloud"></i></li>
+              </ul>
+              <p class="guide-desc">Fussy about light and dislikes being moved once settled.</p>
+              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto">View guide</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-primary rounded-pill px-4">Load more guides</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK CARE TIPS ============ -->
+  <section class="quick-tips bg-brand-green py-5 text-center">
+    <div class="container">
+      <h2 class="tips-title text-white">Quick Care Tips</h2>
+      <p class="tips-sub">The four things every plant needs to stay happy.</p>
+      <div class="row g-3 g-lg-4">
+        <div class="col-6 col-lg-3">
+          <div class="tip-card"><i class="bi bi-droplet"></i><span>Watering</span></div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="tip-card"><i class="bi bi-sun"></i><span>Sunlight</span></div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="tip-card"><i class="bi bi-cloud"></i><span>Humidity</span></div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="tip-card"><i class="bi bi-bug"></i><span>Pest Control</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEASONAL CARE ============ -->
+  <section class="seasonal py-5">
+    <div class="container">
+      <div class="seasonal-card row g-0">
+        <div class="col-12 col-md-4">
+          <img src="https://thursd.com/storage/media/90323/Rain-falls-on-the-orange-leaves-of-a-plant.jpg" class="seasonal-img" alt="Plant leaves in the rain" loading="lazy">
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="seasonal-body">
+            <p class="eyebrow">Seasonal Care</p>
+            <h2 class="seasonal-heading">Care that changes with the season</h2>
+            <p class="seasonal-desc">Watering, light, and pests shift through the year — here's how to adjust.</p>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="chip-static">Summer</span>
+              <span class="chip-static">Rainy</span>
+              <span class="chip-static">Spring</span>
+              <span class="chip-static">Fall</span>
+            </div>
+            <a href="#" class="btn btn-outline-primary rounded-pill px-4">Read seasonal tips</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter pb-5">
+    <div class="container">
+      <div class="newsletter-card d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+        <div>
+          <h2 class="newsletter-title text-white">Stay in the loop</h2>
+          <p class="newsletter-sub mb-0">Care tips and new arrivals, once a month.</p>
+        </div>
+        <div class="d-flex flex-column flex-sm-row gap-2 newsletter-form">
+          <div class="email-field">
+            <i class="bi bi-envelope"></i>
+            <input type="email" class="form-control" placeholder="your@email.com" aria-label="Email address">
+          </div>
+          <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer bg-brand-cream pt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-12 col-lg-4">
+          <a href="#" class="brand brand-dark d-inline-flex align-items-center gap-2"><i class="bi bi-flower1"></i> Plantora</a>
+          <p class="footer-about mt-3">Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
+          <div class="socials d-flex gap-2">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Plant Care</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Categories</h3>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Indoor</a></li>
+            <li><a href="#">Outdoor</a></li>
+            <li><a href="#">Succulent</a></li>
+            <li><a href="#">Herb</a></li>
+            <li><a href="#">Tropical</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="list-unstyled footer-contact">
+            <li><i class="bi bi-geo-alt"></i> St 909, Toul Kork, Phnom Penh</li>
+            <li><i class="bi bi-telephone"></i> +855 234 657 890</li>
+            <li><i class="bi bi-envelope"></i> plantorashop@gmail.com</li>
+            <li><i class="bi bi-clock"></i> Mon–Sun: 8am–6pm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="mb-0 text-center py-3">&copy; 2026 Plantora. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle (navbar toggle, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
