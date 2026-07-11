@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — Plantora</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+<main class="auth-main">
+    <a class="auth-close" href="../index.html" aria-label="Return to Plantora home"><i class="ti ti-x"></i></a>
+    <header class="auth-hero"><a href="../index.html">Welcome to Plantora</a></header>
+    <div class="auth-card auth-panel">
+        <nav class="auth-tabs" aria-label="Authentication pages">
+            <a class="is-active" href="login.html" aria-current="page">Sign in</a>
+            <a href="register.html">Register</a>
+        </nav>
+
+        <!-- error -->
+        <div class="auth-banner auth-banner-error" id="loginError" hidden>
+        <i class="ti ti-alert-circle"></i>
+        <span id="loginErrorMsg">Incorrect email or password. Please try again.</span>
+        </div>
+
+        <!-- success -->
+        <div class="auth-banner auth-banner-success" id="loginSuccess" hidden>
+        <i class="ti ti-circle-check"></i>
+        <span>Welcome back! Redirecting to your garden...</span>
+        </div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+
+        <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <div class="input-wrap">
+            <i class="ti ti-mail input-icon"></i>
+            <input type="email" id="loginEmail" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+            <span class="field-error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="input-wrap">
+            <i class="ti ti-lock input-icon"></i>
+            <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password" minlength="6" required>
+            <button type="button" class="input-toggle" onclick="togglePassword('loginPassword',this)" aria-label="Show password">
+                <i class="ti ti-eye-off"></i>
+            </button>
+            </div>
+            <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <div class="form-row-split">
+            <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe">
+            <span class="checkbox-custom"></span>
+            Remember me
+            </label>
+            <a href="mailto:plantorashop@gmail.com?subject=Password%20reset" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-auth" id="loginBtn">
+            <span>Login</span>
+            <div class="btn-spinner" hidden></div>
+        </button>
+
+        <p class="auth-connect">Or connect with</p>
+        <div class="auth-socials" aria-label="Social sign in options">
+            <button type="button" aria-label="Continue with Facebook" onclick="googleLogin()"><i class="ti ti-brand-facebook"></i></button>
+            <button type="button" aria-label="Continue with Instagram" onclick="googleLogin()"><i class="ti ti-brand-instagram"></i></button>
+            <button type="button" aria-label="Continue with Pinterest" onclick="googleLogin()"><i class="ti ti-brand-pinterest"></i></button>
+            <button type="button" aria-label="Continue with LinkedIn" onclick="googleLogin()"><i class="ti ti-brand-linkedin"></i></button>
+        </div>
+
+        </form>
+    </div>
+</main>
+
+<script src="../js/auth.js"></script>
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        handleLogin();
+    });
+</script>
+</body>
+</html>

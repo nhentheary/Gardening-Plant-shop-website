@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account — Plantora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+    <main class="auth-main">
+    <a class="auth-close" href="../index.html" aria-label="Return to Plantora home"><i class="ti ti-x"></i></a>
+    <header class="auth-hero"><a href="../index.html">Welcome to Plantora</a></header>
+    <div class="auth-card auth-panel auth-panel-register">
+        <nav class="auth-tabs" aria-label="Authentication pages">
+            <a href="login.html">Sign in</a>
+            <a class="is-active" href="register.html" aria-current="page">Register</a>
+        </nav>
+
+        <div class="auth-banner auth-banner-error" id="registerError" hidden>
+        <i class="ti ti-alert-circle"></i>
+        <span id="registerErrorMsg">Please fix the errors below.</span>
+        </div>
+
+        <form id="registerForm" class="auth-form" novalidate>
+
+        <div class="form-row-2">
+            <div class="form-group">
+            <label for="firstName">First name</label>
+            <div class="input-wrap">
+                <i class="ti ti-user input-icon"></i>
+                <input type="text" id="firstName" placeholder="John" autocomplete="given-name" required>
+            </div>
+            <span class="field-error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+            <label for="lastName">Last name</label>
+            <div class="input-wrap">
+                <i class="ti ti-user input-icon"></i>
+                <input type="text" id="lastName" placeholder="Doe" autocomplete="family-name" required>
+            </div>
+            <span class="field-error" id="lastNameError"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <div class="input-wrap">
+            <i class="ti ti-mail input-icon"></i>
+            <input type="email" id="registerEmail" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+            <span class="field-error" id="registerEmailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <div class="input-wrap">
+            <i class="ti ti-lock input-icon"></i>
+            <input type="password" id="registerPassword" placeholder="Create a password" autocomplete="new-password" minlength="6" required>
+            <button type="button" class="input-toggle" onclick="togglePassword('registerPassword',this)" aria-label="Show password">
+                <i class="ti ti-eye-off"></i>
+            </button>
+            </div>
+            <span class="field-error" id="registerPasswordError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm password</label>
+            <div class="input-wrap">
+            <i class="ti ti-lock input-icon"></i>
+            <input type="password" id="confirmPassword" placeholder="Repeat your password" autocomplete="new-password" required>
+            <button type="button" class="input-toggle" onclick="togglePassword('confirmPassword',this)" aria-label="Show password">
+                <i class="ti ti-eye-off"></i>
+            </button>
+            </div>
+            <span class="field-error" id="confirmPasswordError"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-label">
+            <input type="checkbox" id="agreeTerms">
+            <span class="checkbox-custom"></span>
+            I agree to the <a href="../html/about.html" class="auth-link">Terms</a> &amp; <a href="../html/about.html" class="auth-link">Privacy Policy</a>
+            </label>
+            <span class="field-error" id="termsError"></span>
+        </div>
+
+        <button type="submit" class="btn-auth" id="registerBtn">
+            <span>Create Account</span>
+            <div class="btn-spinner" hidden></div>
+        </button>
+
+
+        </form>
+    </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        handleRegister();
+    });
+</script>
+</body>
+</html>

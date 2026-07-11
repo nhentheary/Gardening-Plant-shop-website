@@ -10,10 +10,23 @@
   --color-white:       #FFFFFF;
   --color-danger:      #e05c3a;
   --color-green-tint:  #eaf3de;
+  --color-star-rating: #E8B84A;
+
+  /* ── NAVBAR SPECIFIC ── */
+  --navbar-bg:         #546B41;      /* change this to swap navbar color */
+  --navbar-text:       #FFFFFF;      /* nav link color */
+  --navbar-active:     #DCCCAC;      /* active link color */
+  --navbar-height:     64px;
+
+  /* ── FOOTER SPECIFIC ── */
+  --footer-bg:         #2b3424;      /* change this to swap footer color */
+  --footer-text:       #FFFFFF;      /* footer heading color */
+  --footer-muted:      #DCCCAC;      /* footer link + body text */
+  --footer-border:     rgba(255,255,255,0.12);
 
   /* ── FONTS ── */
   --font-heading: 'Playfair Display', serif;
-  --font-body:    'Inter', sans-serif;
+  --font-body:    'Poppins', sans-serif;
 
   /* ── FONT SIZES ── */
   --text-h1:      56px;

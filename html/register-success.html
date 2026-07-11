@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Plantora 🌿</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+
+    <main class="auth-main">
+    <a class="auth-close" href="../index.html" aria-label="Return to Plantora home"><i class="ti ti-x"></i></a>
+    <header class="auth-hero"><a href="../index.html">Welcome to Plantora</a></header>
+    <div class="auth-card success-card">
+
+        <div class="success-icon-wrap">
+        <i class="ti ti-circle-check"></i>
+        </div>
+
+        <h1>Welcome to the Garden!</h1>
+        <p class="auth-subtitle">Your account has been created successfully</p>
+
+        <div class="success-email-pill" id="successEmailPill">
+        <i class="ti ti-mail"></i>
+        <span id="successEmail">your@email.com</span>
+        </div>
+
+        <p class="auth-note">We've sent a verification link to your email. Please check your inbox to activate your account before exploring.</p>
+
+        <a href="../index.html" class="btn-auth" style="text-decoration:none; margin-top: 4px;">
+        Explore Plantora
+        </a>
+
+        <button class="btn-resend" onclick="resendEmail()" id="resendBtn">
+        Resend verification email
+        </button>
+
+    </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script>
+    const user = JSON.parse(localStorage.getItem('plantora-pending-user') || '{}');
+    if (user.email) document.getElementById('successEmail').textContent = user.email;
+
+    function resendEmail() {
+        const btn = document.getElementById('resendBtn');
+        btn.textContent = '✓ Email sent!';
+        btn.style.color = 'var(--color-dark-green)';
+        btn.disabled = true;
+        setTimeout(() => {
+        btn.textContent = 'Resend verification email';
+        btn.style.color = '';
+        btn.disabled = false;
+        }, 4000);
+    }
+    </script>
+</body>
+</html>

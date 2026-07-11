@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log out — Plantora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+  <main class="auth-main">
+    <a class="auth-close" href="../index.html" aria-label="Return to Plantora home"><i class="ti ti-x"></i></a>
+    <header class="auth-hero"><a href="../index.html">Welcome to Plantora</a></header>
+    <section class="auth-card logout-page-card" aria-labelledby="logout-title">
+      <div class="logout-modal-icon"><i class="ti ti-logout"></i></div>
+      <h1 id="logout-title">Leaving so soon?</h1>
+      <p class="auth-subtitle">Are you sure you want to log out of your Plantora account?</p>
+      <div class="logout-modal-btns">
+        <a class="btn-cancel logout-link" href="../index.html">Stay logged in</a>
+        <button class="btn-logout-confirm" type="button" onclick="confirmLogout()">Log out</button>
+      </div>
+    </section>
+  </main>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
