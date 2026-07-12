@@ -13,7 +13,7 @@
   --color-star-rating: #E8B84A;
 
   /* ── NAVBAR SPECIFIC ── */
-  --navbar-bg:         #546B41;      /* change this to swap navbar color */
+  --navbar-bg:         #2b3424;      /* change this to swap navbar color */
   --navbar-text:       #FFFFFF;      /* nav link color */
   --navbar-active:     #DCCCAC;      /* active link color */
   --navbar-height:     64px;

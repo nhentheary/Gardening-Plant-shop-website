@@ -5,296 +5,404 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plant Care — Plantora</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts (match home page exactly) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom brand stylesheet (must load AFTER Bootstrap) -->
+  <!-- Tabler Icons (same as home) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../images/logo/favicon.svg">
+
+  <!-- CSS: exact same order as home page, using ../ paths -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/plant-care.css">
 </head>
 <body>
 
-  <!-- ============ NAVBAR ============ -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-brand-green py-3">
-    <div class="container">
-      <a class="navbar-brand brand" href="#"><i class="bi bi-flower1"></i> Plantora</a>
+<!-- ── NAVBAR (exact copy from home page) ── -->
+<nav class="navbar">
+  <a href="../index.html" class="navbar-logo">
+    <img src="../images/logo/Logo.png" alt="Plantora" class="navbar-logo-img">
+  </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="navbar-links">
+    <a href="../index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="plant-care.html" class="active">Plant Care</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Plant Care</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
+  <div class="navbar-icons">
+    <div class="navbar-search">
+      <input type="text" placeholder="Search...">
+      <i class="ti ti-search"></i>
+    </div>
+    <a href="cart.html" style="position:relative;">
+      <i class="ti ti-shopping-cart"></i>
+      <span class="cart-badge" style="display:none;">0</span>
+    </a>
+    <a href="account.html">
+      <div class="navbar-profile">
+        <i class="ti ti-user"></i>
+      </div>
+    </a>
+  </div>
 
-        <div class="d-flex align-items-center gap-3 nav-actions">
-          <div class="nav-search">
-            <i class="bi bi-search"></i>
-            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-          </div>
-          <a href="#" class="nav-icon" aria-label="Cart"><i class="bi bi-cart"></i></a>
-          <a href="#" class="nav-icon" aria-label="Account"><i class="bi bi-person"></i></a>
-        </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── MAIN CONTENT ── -->
+<main>
+
+  <!-- ── SECTION 1: HERO ── -->
+  <section class="pc-hero">
+    <div class="pc-hero-content">
+      <p class="pc-eyebrow">🌿 Plant Care</p>
+      <h1 class="pc-hero-title">Grow with<br><em>Confidence</em></h1>
+      <p class="pc-hero-sub">Simple, honest guides to make everything you buy from us thrive — whether you're a beginner or a seasoned plant parent.</p>
+      <div class="pc-hero-btns">
+        <a href="#guides" class="btn-pill btn-pill-filled">Browse Guides</a>
+        <a href="shop.html" class="btn-pill btn-pill-outline-white">Shop Plants</a>
       </div>
     </div>
-  </nav>
-
-  <!-- ============ HERO ============ -->
-  <section class="hero bg-brand-cream">
-    <div class="container">
-      <div class="row align-items-center g-4 g-lg-5 py-5">
-        <div class="col-12 col-lg-6 order-2 order-lg-1">
-          <p class="eyebrow">Plant Care</p>
-          <h1 class="hero-title">Grow with confidence</h1>
-          <p class="hero-sub">Simple, honest guides to make everything you buy from us thrive.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#guides" class="btn btn-primary rounded-pill px-4">Browse guides</a>
-            <a href="#" class="btn btn-outline-primary rounded-pill px-4">Shop plants</a>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6 order-1 order-lg-2">
-          <img src="https://unbeleafable.ph/wp-content/uploads/2023/05/woman-hands-spraying-leaves-of-green-plant-with-wa-2022-11-09-10-26-47-utc.jpg" alt="Person misting a healthy potted plant" class="hero-img" loading="lazy">
-        </div>
-      </div>
+    <div class="pc-hero-img-wrap">
+      <img
+        src="https://i.pinimg.com/1200x/87/0e/43/870e43cb85649d2739b7fe14f339d3ef.jpg"
+        alt="Person caring for a plant"
+        class="pc-hero-img"
+        loading="lazy">
     </div>
   </section>
 
-  <!-- ============ SEARCH + FILTERS ============ -->
-  <section class="filter-bar bg-brand-green py-4">
+  <!-- ── SECTION 2: SEARCH + FILTERS ── -->
+  <section class="pc-filter-bar" id="guides">
     <div class="container">
-      <div class="row g-3 align-items-center mb-3">
-        <div class="col-12 col-lg-7">
-          <div class="guide-search">
-            <i class="bi bi-search"></i>
-            <input type="search" class="form-control" placeholder="Search care guides" aria-label="Search care guides">
-          </div>
+
+      <!-- search row -->
+      <div class="pc-search-row">
+        <div class="pc-search-wrap">
+          <i class="ti ti-search pc-search-icon"></i>
+          <input type="search" class="pc-search-input" placeholder="Search care guides…" id="careSearch">
         </div>
-        <div class="col-6 col-lg">
-          <select class="form-select brand-select" aria-label="Filter by difficulty">
-            <option selected>Difficulty</option>
-            <option>Easy</option><option>Medium</option><option>Hard</option>
+        <div class="pc-dropdowns">
+          <select class="pc-select" id="difficultyFilter" aria-label="Filter by difficulty">
+            <option value="">Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <select class="pc-select" id="lightFilter" aria-label="Filter by light">
+            <option value="">Light</option>
+            <option value="low">Low light</option>
+            <option value="indirect">Bright indirect</option>
+            <option value="full">Full sun</option>
+          </select>
+          <select class="pc-select" id="sortFilter" aria-label="Sort by">
+            <option value="">Sort by</option>
+            <option value="az">A → Z</option>
+            <option value="easy">Easiest first</option>
+            <option value="popular">Most popular</option>
           </select>
         </div>
-        <div class="col-6 col-lg">
-          <select class="form-select brand-select" aria-label="Filter by light">
-            <option selected>Light</option>
-            <option>Low light</option><option>Bright indirect</option><option>Full sun</option>
-          </select>
-        </div>
       </div>
-      <div class="d-flex flex-wrap justify-content-center gap-2">
-        <button class="chip active">All Plants</button>
-        <button class="chip">Indoor</button>
-        <button class="chip">Outdoor</button>
-        <button class="chip">Succulents</button>
-        <button class="chip">Flowering</button>
+
+      <!-- category tabs -->
+      <div class="pc-tabs">
+        <button class="pc-tab active" data-cat="all">All Plants</button>
+        <button class="pc-tab" data-cat="indoor">Indoor</button>
+        <button class="pc-tab" data-cat="outdoor">Outdoor</button>
+        <button class="pc-tab" data-cat="succulents">Succulents</button>
+        <button class="pc-tab" data-cat="flowering">Flowering</button>
+        <button class="pc-tab" data-cat="rare">Rare</button>
       </div>
+
     </div>
   </section>
 
-  <!-- ============ GUIDE CARDS ============ -->
-  <section class="guides py-5" id="guides">
+  <!-- ── SECTION 3: GUIDE CARDS ── -->
+  <section class="pc-guides-section">
     <div class="container">
-      <h2 class="section-title mb-4">Browse care guides</h2>
-      <div class="row g-4">
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card guide-card h-100">
-            <img src="https://i.pinimg.com/736x/49/35/0c/49350c0cbb35cb620b085ba6f08677df.jpg" class="card-img-top guide-img" alt="Snake plant in a pot" loading="lazy">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h3 class="guide-title mb-0">Snake Plant</h3>
-                <span class="badge badge-easy">Easy</span>
-              </div>
-              <ul class="care-icons list-unstyled d-flex gap-2 mb-3">
-                <li><i class="bi bi-droplet"></i></li>
-                <li><i class="bi bi-sun"></i></li>
-                <li><i class="bi bi-cloud"></i></li>
-              </ul>
-              <p class="guide-desc">Nearly indestructible — thrives on neglect and low light.</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto">View guide</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card guide-card h-100">
-            <img src="https://i.pinimg.com/736x/68/b9/21/68b9213c2c5fe9f5e4d7938b3ffb254e.jpg" class="card-img-top guide-img" alt="Monstera deliciosa plant" loading="lazy">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h3 class="guide-title mb-0">Monstera</h3>
-                <span class="badge badge-medium">Medium</span>
-              </div>
-              <ul class="care-icons list-unstyled d-flex gap-2 mb-3">
-                <li><i class="bi bi-droplet"></i></li>
-                <li><i class="bi bi-sun"></i></li>
-                <li><i class="bi bi-cloud"></i></li>
-              </ul>
-              <p class="guide-desc">Loves bright, indirect light and a weekly drink of water.</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto">View guide</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="card guide-card h-100">
-            <img src="https://i.pinimg.com/1200x/8a/e5/76/8ae5761850d92c3873765f63bf179bf7.jpg" class="card-img-top guide-img" alt="Fiddle-leaf fig plant" loading="lazy">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h3 class="guide-title mb-0">Fiddle-Leaf</h3>
-                <span class="badge badge-hard">Hard</span>
-              </div>
-              <ul class="care-icons list-unstyled d-flex gap-2 mb-3">
-                <li><i class="bi bi-droplet"></i></li>
-                <li><i class="bi bi-sun"></i></li>
-                <li><i class="bi bi-cloud"></i></li>
-              </ul>
-              <p class="guide-desc">Fussy about light and dislikes being moved once settled.</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-auto">View guide</a>
-            </div>
-          </article>
-        </div>
-
+      <div class="pc-section-header">
+        <h2 class="section-title">Plant Care Guides</h2>
+        <p class="section-subtitle">Click any plant to read the full care guide</p>
+        <span class="pc-result-count" id="resultCount">Showing 6 guides</span>
       </div>
-      <div class="text-center mt-4">
-        <a href="#" class="btn btn-outline-primary rounded-pill px-4">Load more guides</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ QUICK CARE TIPS ============ -->
-  <section class="quick-tips bg-brand-green py-5 text-center">
-    <div class="container">
-      <h2 class="tips-title text-white">Quick Care Tips</h2>
-      <p class="tips-sub">The four things every plant needs to stay happy.</p>
-      <div class="row g-3 g-lg-4">
-        <div class="col-6 col-lg-3">
-          <div class="tip-card"><i class="bi bi-droplet"></i><span>Watering</span></div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="tip-card"><i class="bi bi-sun"></i><span>Sunlight</span></div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="tip-card"><i class="bi bi-cloud"></i><span>Humidity</span></div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="tip-card"><i class="bi bi-bug"></i><span>Pest Control</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="pc-cards-grid" id="careGrid">
 
-  <!-- ============ SEASONAL CARE ============ -->
-  <section class="seasonal py-5">
-    <div class="container">
-      <div class="seasonal-card row g-0">
-        <div class="col-12 col-md-4">
-          <img src="https://thursd.com/storage/media/90323/Rain-falls-on-the-orange-leaves-of-a-plant.jpg" class="seasonal-img" alt="Plant leaves in the rain" loading="lazy">
-        </div>
-        <div class="col-12 col-md-8">
-          <div class="seasonal-body">
-            <p class="eyebrow">Seasonal Care</p>
-            <h2 class="seasonal-heading">Care that changes with the season</h2>
-            <p class="seasonal-desc">Watering, light, and pests shift through the year — here's how to adjust.</p>
-            <div class="d-flex flex-wrap gap-2 mb-4">
-              <span class="chip-static">Summer</span>
-              <span class="chip-static">Rainy</span>
-              <span class="chip-static">Spring</span>
-              <span class="chip-static">Fall</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary rounded-pill px-4">Read seasonal tips</a>
+        <!-- Card 1 -->
+        <article class="pc-card" data-cat="indoor" data-difficulty="easy" data-light="low" data-name="snake plant">
+          <div class="pc-card-img-wrap">
+            <img src="https://i.pinimg.com/736x/49/35/0c/49350c0cbb35cb620b085ba6f08677df.jpg" alt="Snake Plant" class="pc-card-img" loading="lazy">
+            <span class="pc-difficulty easy">Easy</span>
           </div>
+          <div class="pc-card-body">
+            <h3 class="pc-card-title">Snake Plant</h3>
+            <div class="pc-care-icons">
+              <div class="pc-care-icon" title="Watering: Low"><i class="ti ti-droplet"></i><span>Low water</span></div>
+              <div class="pc-care-icon" title="Light: Low to medium"><i class="ti ti-sun"></i><span>Low light</span></div>
+              <div class="pc-care-icon" title="Temperature: 60–80°F"><i class="ti ti-thermometer"></i><span>18–27°C</span></div>
+            </div>
+            <p class="pc-card-desc">Nearly indestructible — thrives on neglect and low light. Perfect for beginners and busy plant parents.</p>
+            <a href="#" class="btn-pill btn-pill-filled pc-card-btn">View Care Guide</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="pc-card" data-cat="indoor" data-difficulty="medium" data-light="indirect" data-name="monstera">
+          <div class="pc-card-img-wrap">
+            <img src="https://i.pinimg.com/736x/68/b9/21/68b9213c2c5fe9f5e4d7938b3ffb254e.jpg" alt="Monstera" class="pc-card-img" loading="lazy">
+            <span class="pc-difficulty medium">Medium</span>
+          </div>
+          <div class="pc-card-body">
+            <h3 class="pc-card-title">Monstera</h3>
+            <div class="pc-care-icons">
+              <div class="pc-care-icon"><i class="ti ti-droplet"></i><span>Weekly</span></div>
+              <div class="pc-care-icon"><i class="ti ti-sun"></i><span>Bright indirect</span></div>
+              <div class="pc-care-icon"><i class="ti ti-thermometer"></i><span>18–29°C</span></div>
+            </div>
+            <p class="pc-card-desc">Loves bright, indirect light and a weekly drink of water. Known for its iconic split leaves.</p>
+            <a href="#" class="btn-pill btn-pill-filled pc-card-btn">View Care Guide</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="pc-card" data-cat="indoor" data-difficulty="hard" data-light="indirect" data-name="fiddle leaf fig">
+          <div class="pc-card-img-wrap">
+            <img src="https://i.pinimg.com/1200x/8a/e5/76/8ae5761850d92c3873765f63bf179bf7.jpg" alt="Fiddle-Leaf Fig" class="pc-card-img" loading="lazy">
+            <span class="pc-difficulty hard">Hard</span>
+          </div>
+          <div class="pc-card-body">
+            <h3 class="pc-card-title">Fiddle-Leaf Fig</h3>
+            <div class="pc-care-icons">
+              <div class="pc-care-icon"><i class="ti ti-droplet"></i><span>Moderate</span></div>
+              <div class="pc-care-icon"><i class="ti ti-sun"></i><span>Bright indirect</span></div>
+              <div class="pc-care-icon"><i class="ti ti-thermometer"></i><span>16–24°C</span></div>
+            </div>
+            <p class="pc-card-desc">Fussy about light and dislikes being moved once settled. Rewards patience with dramatic foliage.</p>
+            <a href="#" class="btn-pill btn-pill-filled pc-card-btn">View Care Guide</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="pc-card" data-cat="succulents" data-difficulty="easy" data-light="full" data-name="echeveria">
+          <div class="pc-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600" alt="Echeveria" class="pc-card-img" loading="lazy">
+            <span class="pc-difficulty easy">Easy</span>
+          </div>
+          <div class="pc-card-body">
+            <h3 class="pc-card-title">Echeveria</h3>
+            <div class="pc-care-icons">
+              <div class="pc-care-icon"><i class="ti ti-droplet"></i><span>Very low</span></div>
+              <div class="pc-care-icon"><i class="ti ti-sun"></i><span>Full sun</span></div>
+              <div class="pc-care-icon"><i class="ti ti-thermometer"></i><span>10–27°C</span></div>
+            </div>
+            <p class="pc-card-desc">A classic rosette succulent. Thrives in bright light and well-draining soil. Minimal watering needed.</p>
+            <a href="#" class="btn-pill btn-pill-filled pc-card-btn">View Care Guide</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="pc-card" data-cat="flowering" data-difficulty="medium" data-light="indirect" data-name="peace lily">
+          <div class="pc-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=600" alt="Peace Lily" class="pc-card-img" loading="lazy">
+            <span class="pc-difficulty medium">Medium</span>
+          </div>
+          <div class="pc-card-body">
+            <h3 class="pc-card-title">Peace Lily</h3>
+            <div class="pc-care-icons">
+              <div class="pc-care-icon"><i class="ti ti-droplet"></i><span>Moderate</span></div>
+              <div class="pc-care-icon"><i class="ti ti-sun"></i><span>Low–indirect</span></div>
+              <div class="pc-care-icon"><i class="ti ti-thermometer"></i><span>18–27°C</span></div>
+            </div>
+            <p class="pc-card-desc">Elegant white blooms and glossy leaves. Great air purifier. Droops dramatically when thirsty — easy to read.</p>
+            <a href="#" class="btn-pill btn-pill-filled pc-card-btn">View Care Guide</a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="pc-card" data-cat="outdoor" data-difficulty="easy" data-light="full" data-name="pothos">
+          <div class="pc-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1637967886160-fd78dc3ce3f5?w=600" alt="Pothos" class="pc-card-img" loading="lazy">
+            <span class="pc-difficulty easy">Easy</span>
+          </div>
+          <div class="pc-card-body">
+            <h3 class="pc-card-title">Pothos</h3>
+            <div class="pc-care-icons">
+              <div class="pc-care-icon"><i class="ti ti-droplet"></i><span>Low</span></div>
+              <div class="pc-care-icon"><i class="ti ti-sun"></i><span>Any light</span></div>
+              <div class="pc-care-icon"><i class="ti ti-thermometer"></i><span>15–29°C</span></div>
+            </div>
+            <p class="pc-card-desc">Fast-growing trailing plant with heart-shaped leaves. Thrives in almost any condition — beginner-friendly.</p>
+            <a href="#" class="btn-pill btn-pill-filled pc-card-btn">View Care Guide</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- empty state -->
+      <div class="pc-empty" id="emptyState" style="display:none;">
+        <i class="ti ti-plant-off"></i>
+        <p>No guides found. Try a different search or filter.</p>
+        <button class="btn-pill btn-pill-filled" onclick="resetFilters()">Clear filters</button>
+      </div>
+
+      <!-- load more -->
+      <div class="pc-load-more">
+        <a href="#" class="btn-pill btn-pill-outline-dark">Load More Guides</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SECTION 4: QUICK TIPS ── -->
+  <section class="pc-tips-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title white">Quick Care Tips</h2>
+        <p class="section-subtitle beige">The four things every plant needs to stay happy.</p>
+      </div>
+      <div class="pc-tips-grid">
+        <div class="pc-tip-card">
+          <div class="pc-tip-icon"><i class="ti ti-droplet"></i></div>
+          <h3>Watering</h3>
+          <p>Most plants prefer to dry out slightly between waterings. Overwatering is the #1 killer.</p>
+        </div>
+        <div class="pc-tip-card">
+          <div class="pc-tip-icon"><i class="ti ti-sun"></i></div>
+          <h3>Sunlight</h3>
+          <p>Match the plant to the light in your space. Most indoor plants prefer bright indirect light.</p>
+        </div>
+        <div class="pc-tip-card">
+          <div class="pc-tip-icon"><i class="ti ti-wind"></i></div>
+          <h3>Humidity</h3>
+          <p>Tropical plants love moisture. Group plants together or use a pebble tray to boost humidity.</p>
+        </div>
+        <div class="pc-tip-card">
+          <div class="pc-tip-icon"><i class="ti ti-bug"></i></div>
+          <h3>Pest Control</h3>
+          <p>Check leaves weekly. Neem oil or insecticidal soap handles most common houseplant pests.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ NEWSLETTER ============ -->
-  <section class="newsletter pb-5">
+  <!-- ── SECTION 5: SEASONAL CARE ── -->
+  <section class="pc-seasonal">
     <div class="container">
-      <div class="newsletter-card d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
-        <div>
-          <h2 class="newsletter-title text-white">Stay in the loop</h2>
-          <p class="newsletter-sub mb-0">Care tips and new arrivals, once a month.</p>
+      <div class="pc-seasonal-card">
+        <div class="pc-seasonal-img-wrap">
+          <img
+            src="https://i.pinimg.com/1200x/f6/99/83/f699839c69baca79d81b4696271b64ae.jpg"
+            alt="Plant leaves in rain"
+            class="pc-seasonal-img"
+            loading="lazy">
         </div>
-        <div class="d-flex flex-column flex-sm-row gap-2 newsletter-form">
-          <div class="email-field">
-            <i class="bi bi-envelope"></i>
-            <input type="email" class="form-control" placeholder="your@email.com" aria-label="Email address">
+        <div class="pc-seasonal-body">
+          <p class="pc-eyebrow-sm">🍃 Seasonal Care</p>
+          <h2 class="section-title">Care that changes<br>with the season</h2>
+          <p class="section-subtitle">Watering, light, and pests shift through the year — here's how to adjust your routine.</p>
+          <div class="pc-season-chips">
+            <span class="pc-season-chip">☀️ Summer</span>
+            <span class="pc-season-chip">🌧️ Rainy</span>
+            <span class="pc-season-chip">🌸 Spring</span>
+            <span class="pc-season-chip">🍂 Fall</span>
           </div>
-          <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Subscribe</a>
+          <a href="#" class="btn-pill btn-pill-filled">Read Seasonal Tips</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer bg-brand-cream pt-5">
+  <!-- ── SECTION 6: NEWSLETTER ── -->
+  <section class="newsletter-section">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-12 col-lg-4">
-          <a href="#" class="brand brand-dark d-inline-flex align-items-center gap-2"><i class="bi bi-flower1"></i> Plantora</a>
-          <p class="footer-about mt-3">Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
-          <div class="socials d-flex gap-2">
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-          </div>
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2>Stay in the Loop</h2>
+          <p>Get plant care tips, new arrivals, and exclusive deals in your inbox.</p>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h3 class="footer-heading">Quick Links</h3>
-          <ul class="list-unstyled footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Plant Care</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h3 class="footer-heading">Categories</h3>
-          <ul class="list-unstyled footer-links">
-            <li><a href="#">Indoor</a></li>
-            <li><a href="#">Outdoor</a></li>
-            <li><a href="#">Succulent</a></li>
-            <li><a href="#">Herb</a></li>
-            <li><a href="#">Tropical</a></li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-lg-4">
-          <h3 class="footer-heading">Contact</h3>
-          <ul class="list-unstyled footer-contact">
-            <li><i class="bi bi-geo-alt"></i> St 909, Toul Kork, Phnom Penh</li>
-            <li><i class="bi bi-telephone"></i> +855 234 657 890</li>
-            <li><i class="bi bi-envelope"></i> plantorashop@gmail.com</li>
-            <li><i class="bi bi-clock"></i> Mon–Sun: 8am–6pm</li>
-          </ul>
-        </div>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Your email address" class="newsletter-input">
+          <button type="submit" class="btn-pill btn-pill-dark">Subscribe</button>
+        </form>
+        <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="mb-0 text-center py-3">&copy; 2026 Plantora. All rights reserved.</p>
+  </section>
+
+</main>
+
+<!-- ── FOOTER (exact copy from home page) ── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <i class="ti ti-leaf"></i>
+        </div>
+        <span>Plantora</span>
+      </div>
+      <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
+      <div class="footer-social">
+        <a href="#"><i class="ti ti-brand-facebook"></i></a>
+        <a href="#"><i class="ti ti-brand-instagram"></i></a>
+        <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        <a href="#"><i class="ti ti-brand-youtube"></i></a>
       </div>
     </div>
-  </footer>
+    <div class="footer-col">
+      <h4>Quick Link</h4>
+      <a href="../index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="plant-care.html">Plant Care</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="shop.html">Indoor</a>
+      <a href="shop.html">Outdoor</a>
+      <a href="shop.html">Succulent</a>
+      <a href="shop.html">Herb</a>
+      <a href="shop.html">Tropical</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <i class="ti ti-map-pin"></i>
+        <span>St 909, Toul Kork, Phnom Penh</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="ti ti-phone"></i>
+        <span>+855 234-657-890</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="ti ti-mail"></i>
+        <span>plantorashop@gmail.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="ti ti-clock"></i>
+        <span>Mon–Sun: 8am–6pm</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Plantora Shop. All rights reserved.</p>
+    <p>Made with 🌱 by the Plantora team</p>
+  </div>
+</footer>
 
-  <!-- Bootstrap JS bundle (navbar toggle, etc.) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS: same as home page, using ../ paths -->
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/plant-care.js"></script>
+
 </body>
 </html>
