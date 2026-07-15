@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantora - Wish List</title>
+    <title>Plantora - Settings</title>
     <!-- Fonts (match home page exactly) -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -57,134 +57,99 @@
 </nav> 
 
 <!-- ══════════════════════════════
-     WISHLIST — MAIN CONTENT
-     Paste between </nav> and <footer>
+     SETTINGS — MAIN CONTENT
+     Paste between </nav> and <footer> in settings.html
      ══════════════════════════════ -->
 <main class="account-page">
   <div class="account-layout">
 
-    <!-- ── SIDEBAR (same as account.html — only .active moved) ── -->
     <aside class="account-sidebar">
       <div class="account-user">
         <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Sopheak Lim" class="account-avatar">
         <h3 class="account-user-name">Sopheak Lim</h3>
         <p class="account-user-email">sopheak.lim@gmail.com</p>
       </div>
-
       <nav class="account-nav">
-        <a href="account.html" class="account-nav-link">
-          <i class="ti ti-user"></i><span>My Account</span>
-        </a>
-        <a href="order-history.html" class="account-nav-link">
-          <i class="ti ti-package"></i><span>Orders</span>
-        </a>
-        <a href="wishlist.html" class="account-nav-link active">
-          <i class="ti ti-heart"></i><span>Wishlist</span>
-        </a>
-        <a href="address.html" class="account-nav-link">
-          <i class="ti ti-map-pin"></i><span>Address</span>
-        </a>
-        <a href="settings.html" class="account-nav-link">
-          <i class="ti ti-settings"></i><span>Settings</span>
-        </a>
-        <a href="../index.html" class="account-nav-link logout">
-          <i class="ti ti-logout"></i><span>Log Out</span>
-        </a>
+        <a href="account.html" class="account-nav-link"><i class="ti ti-user"></i><span>My Account</span></a>
+        <a href="order-history.html" class="account-nav-link"><i class="ti ti-package"></i><span>Orders</span></a>
+        <a href="wishlist.html" class="account-nav-link"><i class="ti ti-heart"></i><span>Wishlist</span></a>
+        <a href="address.html" class="account-nav-link"><i class="ti ti-map-pin"></i><span>Address</span></a>
+        <a href="settings.html" class="account-nav-link active"><i class="ti ti-settings"></i><span>Settings</span></a>
+        <a href="../index.html" class="account-nav-link logout"><i class="ti ti-logout"></i><span>Log Out</span></a>
       </nav>
     </aside>
 
-    <!-- ── MAIN PANEL ── -->
     <section class="account-main">
-      <div class="wishlist-header">
-        <h1 class="account-title">My Wishlist</h1>
-        <span class="wishlist-count">3 items</span>
+      <h1 class="account-title">Settings</h1>
+
+      <!-- Change password -->
+      <div class="profile-card mb-md">
+        <h2 class="profile-title">Change Password</h2>
+        <form class="profile-form">
+          <div class="form-group">
+            <label for="currentPw">Current Password</label>
+            <input type="password" id="currentPw" placeholder="••••••••">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="newPw">New Password</label>
+              <input type="password" id="newPw" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+              <label for="confirmPw">Confirm New Password</label>
+              <input type="password" id="confirmPw" placeholder="••••••••">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-save">Update Password</button>
+          </div>
+        </form>
       </div>
 
-      <div class="wishlist-grid">
+      <!-- Notifications -->
+      <div class="profile-card mb-md">
+        <h2 class="profile-title">Notifications</h2>
 
-        <!-- Card 1 -->
-        <article class="product-card">
-          <div class="product-media">
-            <img src="../images/plants/Echeveria Elegans.jpg" alt="Echeveria Elegans">
-            <button class="wishlist-btn" aria-label="Remove from wishlist">
-              <i class="ti ti-heart-filled"></i>
-            </button>
+        <div class="toggle-row">
+          <div class="toggle-text">
+            <h3>Order updates</h3>
+            <p>Get notified when your order ships or arrives.</p>
           </div>
-          <div class="product-body">
-            <h3 class="product-name">Echeveria Elegans</h3>
-            <p class="product-desc">A classic rosette succulent, perfect for sunny spots.</p>
-            <div class="product-meta">
-              <span class="product-price">$8.90</span>
-              <span class="product-rating">
-                <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
-                <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
-                <i class="ti ti-star"></i>
-                <span class="rating-value">4.9</span>
-              </span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </article>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
 
-        <!-- Card 2 -->
-        <article class="product-card">
-          <div class="product-media">
-            <img src="https://i.pinimg.com/736x/68/b9/21/68b9213c2c5fe9f5e4d7938b3ffb254e.jpg" alt="Monstera Deliciosa">
-            <button class="wishlist-btn" aria-label="Remove from wishlist">
-              <i class="ti ti-heart-filled"></i>
-            </button>
+        <div class="toggle-row">
+          <div class="toggle-text">
+            <h3>Plant care tips</h3>
+            <p>Monthly seasonal care advice for your plants.</p>
           </div>
-          <div class="product-body">
-            <h3 class="product-name">Monstera Deliciosa</h3>
-            <p class="product-desc">Bold split leaves that love bright, indirect light.</p>
-            <div class="product-meta">
-              <span class="product-price">$28.00</span>
-              <span class="product-rating">
-                <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
-                <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
-                <i class="ti ti-star-filled"></i>
-                <span class="rating-value">4.8</span>
-              </span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </article>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
 
-        <!-- Card 3 -->
-        <article class="product-card">
-          <div class="product-media">
-            <img src="../images/plants/Snake Plant.jpg" alt="Snake Plant">
-            <button class="wishlist-btn" aria-label="Remove from wishlist">
-              <i class="ti ti-heart-filled"></i>
-            </button>
+        <div class="toggle-row">
+          <div class="toggle-text">
+            <h3>Promotions &amp; new arrivals</h3>
+            <p>Discounts and newly stocked plants.</p>
           </div>
-          <div class="product-body">
-            <h3 class="product-name">Snake Plant</h3>
-            <p class="product-desc">Nearly indestructible — thrives on neglect and low light.</p>
-            <div class="product-meta">
-              <span class="product-price">$5.90</span>
-              <span class="product-rating">
-                <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
-                <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
-                <i class="ti ti-star"></i>
-                <span class="rating-value">4.0</span>
-              </span>
-            </div>
-            <button class="btn-cart">Add to Cart</button>
-          </div>
-        </article>
-
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
 
-      <!-- ── EMPTY STATE (show this when wishlist has 0 items; delete the grid above) ── -->
-      <!--
-      <div class="wishlist-empty">
-        <div class="empty-icon"><i class="ti ti-heart"></i></div>
-        <h2>Your wishlist is empty</h2>
-        <p>Save the plants you love and find them here anytime.</p>
-        <a href="shop.html" class="btn-cart btn-cart-inline">Browse plants</a>
+      <!-- Danger zone -->
+      <div class="profile-card danger-card">
+        <h2 class="profile-title">Delete Account</h2>
+        <p class="danger-text">Once you delete your account, there is no going back. All your orders and saved plants will be permanently removed.</p>
+        <button class="btn-danger">Delete my account</button>
       </div>
-      -->
     </section>
 
   </div>

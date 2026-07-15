@@ -1,0 +1,290 @@
+/* ══════════════════════════════
+   SIDEBAR
+   ══════════════════════════════ */
+.account-sidebar {
+  background: var(--color-deep-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--gap-lg);
+  box-shadow: var(--shadow-card);
+  align-self: stretch;
+  height: 100%;
+}
+
+/* User block */
+.account-user {
+  text-align: center;
+  padding-bottom: var(--gap-md);
+  border-bottom: 0.5px solid rgba(255,255,255,0.15);
+  margin-bottom: var(--gap-md);
+}
+
+.account-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 3px solid var(--color-light-green);
+  margin: 0 auto var(--gap-md);
+}
+
+.account-user-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--gap-xs);
+}
+
+.account-user-email {
+  font-size: var(--text-caption);
+  color: var(--color-warm-beige);
+  word-break: break-all;
+}
+
+/* Sidebar nav */
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.account-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  font-size: var(--text-body);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: background 0.2s, opacity 0.2s, color 0.2s;
+}
+
+.account-nav-link i { font-size: 20px; }
+
+.account-nav-link:hover {
+  background: rgba(255,255,255,0.08);
+  opacity: 1;
+}
+
+.account-nav-link.active {
+  background: var(--color-green-tint);
+  color: var(--color-deep-dark);
+  font-weight: 600;
+  opacity: 1;
+}
+
+.account-nav-link.logout { color: var(--color-danger); }
+.account-nav-link.logout:hover { background: rgba(224,92,58,0.12); }
+/* ══════════════════════════════
+   WISHLIST
+   Append to account.css (reuses sidebar styles)
+   ══════════════════════════════ */
+
+.wishlist-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
+
+/* .account-title already styled in account.css — kill its bottom margin here */
+.wishlist-header .account-title { margin-bottom: 0; }
+
+.wishlist-count {
+  font-size: var(--text-caption);
+  color: var(--color-muted);
+}
+
+/* Grid: 3 → 2 → 1 */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-md);
+}
+
+/* ══════════════════════════════
+   PRODUCT CARD
+   ══════════════════════════════ */
+.product-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-warm-beige);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(43,52,36,0.14);
+}
+
+/* Image + heart */
+.product-media {
+  position: relative;
+}
+
+.product-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-green-tint);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: var(--gap-sm);
+  right: var(--gap-sm);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  color: var(--color-danger);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.1);
+  background: var(--color-cream);
+}
+
+/* Card body */
+.product-body {
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-deep-dark);
+  margin-bottom: var(--gap-xs);
+}
+
+.product-desc {
+  font-size: var(--text-caption);
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: var(--gap-md);
+  flex: 1;                 /* pushes price + button down so cards align */
+}
+
+/* Price + rating row */
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-md);
+}
+
+.product-price {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-dark-green);
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 14px;
+  color: var(--color-star-rating);
+}
+
+.rating-value {
+  margin-left: var(--gap-xs);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--color-deep-dark);
+}
+
+/* Add to cart */
+.btn-cart {
+  width: 100%;
+  background: var(--color-dark-green);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--text-button);
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  padding: 12px 20px;
+  transition: background 0.2s;
+  margin-top: auto;
+}
+
+.btn-cart:hover { background: var(--color-deep-dark); }
+
+.btn-cart-inline {
+  width: auto;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* ══════════════════════════════
+   EMPTY STATE
+   ══════════════════════════════ */
+.wishlist-empty {
+  background: var(--color-white);
+  border: 1px dashed var(--color-warm-beige);
+  border-radius: var(--radius-lg);
+  padding: var(--gap-2xl) var(--gap-lg);
+  text-align: center;
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--gap-md);
+  border-radius: var(--radius-full);
+  background: var(--color-green-tint);
+  color: var(--color-dark-green);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlist-empty h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-deep-dark);
+  margin-bottom: var(--gap-sm);
+}
+
+.wishlist-empty p {
+  font-size: var(--text-body);
+  color: var(--color-muted);
+  margin-bottom: var(--gap-lg);
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════ */
+@media (max-width: 1024px) {
+  .wishlist-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .wishlist-grid { grid-template-columns: 1fr; }
+  .wishlist-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-xs);
+  }
+}
