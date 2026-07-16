@@ -25,7 +25,7 @@
   --footer-border:     rgba(255,255,255,0.12);
 
   /* ── FONTS ── */
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Poppins', sans-serif;
 
   /* ── FONT SIZES ── */
