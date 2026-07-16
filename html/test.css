@@ -25,8 +25,7 @@
     <!-- ── NAVBAR ── -->
     <nav class="navbar">
     <a href="../index.html" class="navbar-logo">
-        <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
-        <span class="navbar-logo-text">Plantora</span>
+        <img src="../images/logo/Logo.png" alt="Plantora" class="navbar-logo-img">
     </a>
 
     <div class="navbar-links">
@@ -344,11 +343,12 @@
     <footer class="footer">
     <div class="footer-grid">
         <div class="footer-brand">
-        <a href="#" class="navbar-logo">
-            <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
-            <span class="navbar-logo-text">Plantora</span>
-        </a>
-        <br>
+        <div class="footer-logo">
+            <div class="footer-logo-icon">
+            <i class="ti ti-leaf"></i>
+            </div>
+            <span>Plantora</span>
+        </div>
         <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
         <div class="footer-social">
             <a href="#"><i class="ti ti-brand-facebook"></i></a>
@@ -404,5 +404,5 @@
     <script src="../js/auth.js"></script>
     <script src="../js/plant-care.js"></script>
 
-</body>
-</html>
+    </body>
+    </html>
