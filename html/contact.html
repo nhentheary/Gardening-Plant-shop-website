@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Plantora for help with plant care, products, and orders.">
+    <title>Contact Us — Plantora</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/logo/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body class="contact-page">
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+        <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
+        <span class="navbar-logo-text">Plantora</span>
+    </a>
+
+    <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="plant-care.html">Plant Care</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+
+    <div class="navbar-icons">
+        <div class="navbar-search">
+        <input type="text" placeholder="Search...">
+        <i class="ti ti-search"></i>
+        </div>
+        <a href="cart.html" style="position:relative;">
+        <i class="ti ti-shopping-cart"></i>
+        <span class="cart-badge" style="display:none;">0</span>
+        </a>
+        <a href="account.html">
+        <div class="navbar-profile">
+            <i class="ti ti-user"></i>
+        </div>
+        </a>
+    </div>
+
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+    </nav>
+
+    <main>
+        <section class="contact-hero" aria-labelledby="page-title">
+        <div class="hero-content">
+            <h1 id="page-title">Contact Us</h1>
+            <p>We're always happy to chat plants, orders, or anything in between.</p>
+        </div>
+        </section>
+
+        <section id="contact" class="contact-section" aria-label="Contact Plantora">
+        <div class="contact-grid">
+            <form class="contact-form" novalidate>
+            <div class="form-row">
+                <label>
+                <span>Full name</span>
+                <input name="name" type="text" placeholder="bopha tep" autocomplete="name" required>
+                </label>
+                <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="tepbopha@123gmail.com" autocomplete="email" required>
+                </label>
+            </div>
+            <label>
+                <span>Phone number</span>
+                <input name="phone" type="tel" placeholder="0123 456 678" autocomplete="tel">
+            </label>
+            <label>
+                <span>Subject</span>
+                <select name="subject" required>
+                <option value="">Select a topic</option>
+                <option>Order support</option>
+                <option>Plant care</option>
+                <option>Product question</option>
+                <option>Other</option>
+                </select>
+            </label>
+            <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+            </label>
+            <label class="consent">
+                <input name="consent" type="checkbox" required>
+                <span>I agree to be contacted about my inquiry.</span>
+            </label>
+            <button class="submit-button" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="contact-card">
+            <h2>Get in touch with us</h2>
+            <p class="contact-intro">
+                Have a question about your order or a plant that needs some love? We're just a
+                message away.
+            </p>
+            <address class="contact-list">
+                <a href="https://www.openstreetmap.org/?mlat=11.5749&mlon=104.8940#map=16/11.5749/104.8940" target="_blank" rel="noreferrer">
+                <span class="contact-icon" aria-hidden="true"><svg><use href="../images/plants/social-icons.svg?v=2#location"></use></svg></span>
+                St 909, Toul Kork, Phnom Penh
+                </a>
+                <a href="tel:+855234657890">
+                <span class="contact-icon" aria-hidden="true"><svg><use href="../images/plants/social-icons.svg?v=2#phone"></use></svg></span>
+                +855 234-657-890
+                </a>
+                <a href="mailto:plantorashop@gmail.com">
+                <span class="contact-icon" aria-hidden="true"><svg><use href="../images/plants/social-icons.svg?v=2#email"></use></svg></span>
+                plantorashop@gmail.com
+                </a>
+                <p><span class="contact-icon" aria-hidden="true"><svg><use href="../images/plants/social-icons.svg?v=2#clock"></use></svg></span>Mon–Sun: 8am–6pm</p>
+            </address>
+            <div class="social-links" aria-label="Social media">
+                <a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="../images/plants/social-icons.svg#facebook"></use></svg></a>
+                <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="../images/plants/social-icons.svg#instagram"></use></svg></a>
+                <a href="#" aria-label="Twitter"><svg aria-hidden="true"><use href="../images/plants/social-icons.svg#twitter"></use></svg></a>
+                <a href="#" aria-label="TikTok"><svg aria-hidden="true"><use href="../images/plants/social-icons.svg#tiktok"></use></svg></a>
+            </div>
+            </aside>
+        </div>
+        </section>
+
+        <section class="location-section" aria-labelledby="location-heading">
+        <div class="section-heading">
+            <h2 id="location-heading">Visit Our Store</h2>
+            <p>Find us on St 909 in Toul Kork, Phnom Penh.</p>
+        </div>
+        <div class="map-card">
+            <iframe title="Map showing Plantora on Street 909 in Toul Kork, Phnom Penh" src="https://www.openstreetmap.org/export/embed.html?bbox=104.8840%2C11.5649%2C104.9040%2C11.5849&layer=mapnik&marker=11.5749%2C104.8940" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <div class="map-details">
+            <div>
+                <span class="contact-icon" aria-hidden="true">●</span>
+                <span><strong>Plantora Shop</strong><small>St 909, Toul Kork, Phnom Penh</small></span>
+            </div>
+            <a class="directions-button" href="https://www.openstreetmap.org/directions?to=11.5749%2C104.8940" target="_blank" rel="noreferrer">
+                Get directions
+            </a>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+        <a href="../index.html" class="navbar-logo">
+            <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
+            <span class="navbar-logo-text">Plantora</span>
+        </a>
+        <br>
+        <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
+        <div class="footer-social">
+            <a href="#"><i class="ti ti-brand-facebook"></i></a>
+            <a href="#"><i class="ti ti-brand-instagram"></i></a>
+            <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+            <a href="#"><i class="ti ti-brand-youtube"></i></a>
+        </div>
+        </div>
+        <div class="footer-col">
+        <h4>Quick Link</h4>
+        <a href="../index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="plant-care.html">Plant Care</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="shop.html">Indoor</a>
+        <a href="shop.html">Outdoor</a>
+        <a href="shop.html">Succulent</a>
+        <a href="shop.html">Herb</a>
+        <a href="shop.html">Tropical</a>
+        </div>
+        <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+            <i class="ti ti-map-pin"></i>
+            <span>St 909, Toul Kork, Phnom Penh</span>
+        </div>
+        <div class="footer-contact-item">
+            <i class="ti ti-phone"></i>
+            <span>+855 234-657-890</span>
+        </div>
+        <div class="footer-contact-item">
+            <i class="ti ti-mail"></i>
+            <span>plantorashop@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+            <i class="ti ti-clock"></i>
+            <span>Mon–Sun: 8am–6pm</span>
+        </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Plantora Shop. All rights reserved.</p>
+        <p>Made with 🌱 by the Plantora team</p>
+    </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+
+</body>
+</html>

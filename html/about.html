@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Plantora's story, mission, vision, and the team helping people create greener spaces.">
+    <title>About Us — Plantora</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/logo/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body class="about-page">
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-logo">
+            <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
+            <span class="navbar-logo-text">Plantora</span>
+        </a>
+
+        <div class="navbar-links">
+            <a href="../index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="plant-care.html">Plant Care</a>
+            <a href="about.html" class="active">About us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="navbar-icons">
+            <div class="navbar-search">
+                <input type="text" placeholder="Search...">
+                <i class="ti ti-search"></i>
+            </div>
+            <a href="cart.html" style="position:relative;">
+                <i class="ti ti-shopping-cart"></i>
+                <span class="cart-badge" style="display:none;">0</span>
+            </a>
+            <a href="account.html">
+                <div class="navbar-profile">
+                    <i class="ti ti-user"></i>
+                </div>
+            </a>
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Story Hero Section -->
+        <section class="story-hero">
+            <div class="story-hero-container">
+                <div class="story-copy">
+                    <h1>Our Story</h1>
+                    <div class="title-underline"></div>
+                    <p class="story-lead">
+                        At Plantora, we believe that plants do more than decorate spaces — they bring life, balance, and happiness into our everyday lives. We're passionate about helping you connect with nature through carefully selected plants and expert guidance.
+                    </p>
+                    <p class="story-sub">
+                        Thank you for being a part of our growing community. Let's create greener spaces together.
+                    </p>
+                    <!-- Contact Us Button -->
+                    <a href="contact.html" class="contact-btn">
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="purpose-section">
+            <div class="purpose-heading">
+                <h2>OUR MISSION & VISION</h2>
+                <p class="purpose-sub">Guided by purpose, inspired by nature.</p>
+                <p class="purpose-sub">We grow more than plants — we grow a better tomorrow.</p>
+            </div>
+
+            <div class="purpose-grid">
+                <!-- Mission Card -->
+                <div class="purpose-card">
+                    <div class="purpose-image-side">
+                        <img src="https://i.pinimg.com/1200x/16/a0/b0/16a0b02443899a966432e68035e3c73e.jpg" alt="Our Mission" class="purpose-img">
+                    </div>
+                    <div class="purpose-content-side">
+                        <h3>OUR MISSION</h3>
+                        <p>Our mission is to make plants accessible to everyone and to inspire a deeper connection with nature.</p>
+                        <p>We provide healthy, high-quality plants and expert care guidance to help you create a greener, healthier, and happier life.</p>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="purpose-card">
+                    <div class="purpose-image-side">
+                        <img src="https://i.pinimg.com/1200x/3b/e5/d9/3be5d93f074a34ebdbb744c8f73d4d55.jpg" alt="Our Vision" class="purpose-img">
+                    </div>
+                    <div class="purpose-content-side">
+                        <h3>OUR VISION</h3>
+                        <p>Our vision is to create a world where nature is a seamless part of everyday life.</p>
+                        <p>We aim to build a global community that values sustainability, personal well-being, and the natural beauty of plants in every single space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+        TEAM SECTION
+        =========================================== -->
+        <section class="team-section" aria-labelledby="team-title">
+            <header class="team-heading">
+                <h2 id="team-title">Our Team</h2>
+                <p>A team of passionate minds working together to grow Plantora and make an impact.</p>
+            </header>
+
+            <div class="team-grid">
+                <!-- Member 1: Nhean Theary -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/team/nhen-theary.png" alt="Nhean Theary" class="team-img">
+                    </div>
+                    <div class="team-details">
+                        <h3>Nhen Theary</h3>
+                        <p class="team-role">Founder &amp; CEO</p>
+                        <div class="team-socials" aria-label="Nhen Theary social links"> 
+                            <a href="mailto:nhentheary@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a> 
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a> 
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a> 
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Member 2: Noeb Sokreaksa -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/team/reaksa.JPG" alt="Noeb Sokreaksa" class="team-img">
+                    </div>
+                    <div class="team-details">
+                        <h3>Noeb Sokreaksa</h3>
+                        <p class="team-role">Head of Operations</p>
+                        <div class="team-socials" aria-label="Noeb Sokreaksa social links"> 
+                            <a href="mailto:noebsokreaksa@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a> 
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a> 
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a> 
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Member 3: Hut Meilang -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/team/hut-meilang.JPG" alt="Hut Meilang" class="team-img">
+                    </div>
+                    <div class="team-details">
+                        <h3>Hut Meilang</h3>
+                        <p class="team-role">Plant Care Specialist</p>
+                        <div class="team-socials" aria-label="Hut Meilang social links"> 
+                            <a href="mailto:meilanghut@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a> 
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a> 
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a> 
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Member 4: Toch Sokthida -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/team/toch-sokthida.JPG" alt="Toch Sokthida" class="team-img">
+                    </div>
+                    <div class="team-details">
+                        <h3>Toch Sokthida</h3>
+                        <p class="team-role">Marketing Specialist</p>
+                        <div class="team-socials" aria-label="Toch Sokthida social links"> 
+                            <a href="mailto:tdaa09851@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a> 
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a> 
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a> 
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="navbar-logo">
+                    <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
+                    <span class="navbar-logo-text">Plantora</span>
+                </a>
+                <br>
+                <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="ti ti-brand-facebook"></i></a>
+                    <a href="#"><i class="ti ti-brand-instagram"></i></a>
+                    <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+                    <a href="#"><i class="ti ti-brand-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Link</h4>
+                <a href="../index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="plant-care.html">Plant Care</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="shop.html">Indoor</a>
+                <a href="shop.html">Outdoor</a>
+                <a href="shop.html">Succulent</a>
+                <a href="shop.html">Herb</a>
+                <a href="shop.html">Tropical</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <i class="ti ti-map-pin"></i>
+                    <span>St 909, Toul Kork, Phnom Penh</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-phone"></i>
+                    <span>+855 234-657-890</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-mail"></i>
+                    <span>plantorashop@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-clock"></i>
+                    <span>Mon–Sun: 8am–6pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Plantora Shop. All rights reserved.</p>
+            <p>Made with 🌱 by the Plantora team</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/about.js"></script>
+</body>
+</html>
