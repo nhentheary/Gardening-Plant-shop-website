@@ -1,0 +1,388 @@
+/* ============================================
+    PLANT-GUIDE.CSS
+    Detail/template page for a single care guide.
+    Reuses variables + component classes from
+    global.css and plant-care.css (btn-pill,
+    pc-difficulty, section-title, newsletter-*).
+    ============================================ */
+
+    /* ── BREADCRUMB ── */
+    .pg-breadcrumb {
+    background: var(--color-cream);
+    border-bottom: 0.5px solid var(--color-warm-beige);
+    padding: var(--gap-sm) 0;
+    }
+    .pg-breadcrumb-inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--color-muted);
+    flex-wrap: wrap;
+    }
+    .pg-breadcrumb-inner a {
+    color: var(--color-muted);
+    transition: color 0.2s;
+    }
+    .pg-breadcrumb-inner a:hover { color: var(--color-dark-green); }
+    .pg-breadcrumb-inner i { font-size: 12px; opacity: 0.6; }
+    .pg-breadcrumb-inner span { color: var(--color-dark-green); font-weight: 600; }
+
+    /* ── NOT FOUND STATE ── */
+    .pg-state {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-md);
+    text-align: center;
+    padding: var(--gap-2xl) var(--gap-md);
+    background: var(--color-white);
+    }
+    .pg-state i { font-size: 48px; color: var(--color-warm-beige); }
+    .pg-state p { font-size: 16px; color: var(--color-muted); }
+
+    /* difficulty badge reused from plant-care.css, static (non-absolute) version */
+    #pgDifficulty.pc-difficulty {
+    position: static;
+    display: inline-block;
+    margin-bottom: var(--gap-sm);
+    }
+
+    /* ══════════════════════════════════════════
+    SECTION 1: GUIDE HERO
+    ══════════════════════════════════════════ */
+    .pg-hero {
+    background: var(--color-white);
+    display: flex;
+    align-items: stretch;
+    min-height: 480px;
+    }
+
+    .pg-hero-img-wrap {
+    flex: 0 0 45%;
+    max-width: 620px;
+    overflow: hidden;
+    }
+    .pg-hero-img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    }
+
+    .pg-hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--gap-2xl) clamp(24px, 6vw, 80px);
+    }
+
+    .pg-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--color-deep-dark);
+    line-height: 1.15;
+    margin-bottom: var(--gap-sm);
+    }
+
+    .pg-hero-sub {
+    font-size: 15px;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: var(--gap-lg);
+    max-width: 460px;
+    }
+
+    /* quick stats grid */
+    .pg-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-md);
+    margin-bottom: var(--gap-xl);
+    max-width: 460px;
+    }
+    .pg-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-green-tint);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+    }
+    .pg-stat i {
+    font-size: 20px;
+    color: var(--color-dark-green);
+    flex-shrink: 0;
+    }
+    .pg-stat-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    }
+    .pg-stat-value {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-deep-dark);
+    margin-top: 2px;
+    }
+
+    .pg-hero-btns {
+    display: flex;
+    gap: var(--gap-md);
+    flex-wrap: wrap;
+    }
+
+    /* ══════════════════════════════════════════
+    SECTION 2: DETAILED CARE
+    ══════════════════════════════════════════ */
+    .pg-details-section {
+    background: var(--color-cream);
+    padding: var(--gap-2xl) 0;
+    }
+
+    .pg-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--gap-xl);
+    align-items: start;
+    }
+
+    .pg-details-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    }
+
+    .pg-detail-block {
+    background: var(--color-white);
+    border: 1px solid #eee;
+    border-radius: var(--radius-lg);
+    padding: var(--gap-lg);
+    display: flex;
+    gap: var(--gap-md);
+    align-items: flex-start;
+    }
+
+    .pg-detail-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-green-tint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .pg-detail-icon i {
+    font-size: 20px;
+    color: var(--color-dark-green);
+    }
+
+    .pg-detail-block h2 {
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--color-deep-dark);
+    margin-bottom: 6px;
+    }
+    .pg-detail-block p {
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.7;
+    }
+
+    /* generic bullet list used inside detail blocks + sidebar */
+    .pg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+    .pg-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.6;
+    }
+    .pg-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-light-green);
+    }
+
+    /* ── SIDEBAR ── */
+    .pg-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    position: sticky;
+    top: calc(var(--navbar-height) + var(--gap-lg));
+    }
+
+    .pg-tip-box,
+    .pg-fact-box {
+    background: var(--color-white);
+    border: 1px solid #eee;
+    border-radius: var(--radius-lg);
+    padding: var(--gap-lg);
+    }
+
+    .pg-tip-box h3,
+    .pg-fact-box h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-deep-dark);
+    margin-bottom: var(--gap-md);
+    }
+    .pg-tip-box h3 i,
+    .pg-fact-box h3 i {
+    color: var(--color-dark-green);
+    font-size: 18px;
+    }
+
+    .pg-tip-box { background: var(--color-green-tint); border-color: transparent; }
+
+    /* quick facts list */
+    .pg-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+    .pg-facts li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-sm);
+    font-size: 13px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #eee;
+    }
+    .pg-facts li:last-child { border-bottom: none; padding-bottom: 0; }
+    .pg-fact-label { color: var(--color-muted); font-weight: 500; }
+    .pg-fact-value { color: var(--color-deep-dark); font-weight: 700; text-align: right; }
+
+    /* ══════════════════════════════════════════
+    SECTION 3: RELATED GUIDES
+    ══════════════════════════════════════════ */
+    .pg-related-section {
+    background: var(--color-white);
+    padding: var(--gap-2xl) 0;
+    }
+
+    .pg-related-section .section-title { margin-bottom: var(--gap-xl); }
+
+    .pg-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+    }
+
+    .pg-related-card {
+    display: block;
+    background: var(--color-white);
+    border: 1px solid #eee;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .pg-related-card:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-4px);
+    }
+
+    .pg-related-img-wrap {
+    position: relative;
+    overflow: hidden;
+    }
+    .pg-related-img-wrap img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    transition: transform 0.35s;
+    }
+    .pg-related-card:hover .pg-related-img-wrap img { transform: scale(1.05); }
+
+    /* reuse .pc-difficulty positioning from plant-care.css */
+    .pg-related-img-wrap .pc-difficulty {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    }
+
+    .pg-related-body { padding: var(--gap-md); }
+    .pg-related-body h3 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-deep-dark);
+    margin-bottom: 4px;
+    }
+    .pg-related-body p {
+    font-size: 13px;
+    color: var(--color-muted);
+    line-height: 1.5;
+    }
+
+    /* ══════════════════════════════════════════
+    RESPONSIVE — TABLET (max 1024px)
+    ══════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+    .pg-hero-img-wrap { flex: 0 0 40%; }
+    .pg-details-grid { grid-template-columns: 1fr; }
+    .pg-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+    .pg-tip-box, .pg-fact-box { flex: 1; min-width: 240px; }
+    .pg-related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ══════════════════════════════════════════
+    RESPONSIVE — MOBILE (max 768px)
+    ══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+    .pg-hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .pg-hero-img-wrap {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: 260px;
+    }
+    .pg-hero-content {
+        padding: var(--gap-xl) var(--gap-md);
+    }
+    .pg-stats-grid { max-width: 100%; }
+    .pg-hero-btns { gap: var(--gap-sm); }
+
+    .pg-details-section { padding: var(--gap-xl) 0; }
+    .pg-detail-block { flex-direction: column; }
+    .pg-sidebar { flex-direction: column; }
+
+    .pg-related-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════
+    RESPONSIVE — SMALL MOBILE (max 480px)
+    ══════════════════════════════════════════ */
+    @media (max-width: 480px) {
+    .pg-hero-title { font-size: 26px; }
+    .pg-stats-grid { grid-template-columns: 1fr; }
+    .pg-hero-btns { flex-direction: column; }
+    .pg-hero-btns .btn-pill { width: 100%; }
+    }
