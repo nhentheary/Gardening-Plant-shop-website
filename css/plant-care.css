@@ -143,14 +143,23 @@
     SECTION 1: HERO
     ══════════════════════════════════════════ */
     .pc-hero {
-    background: var(--color-dark-green);
-    display: flex;
-    align-items: center;
-    min-height: 520px;
-    overflow: hidden;
-    position: relative;
+        background: var(--color-dark-green);
+        display: flex;
+        align-items: stretch; /* Forces height to match the image height */
+        width: 100%;
+        overflow: hidden;
     }
 
+    .pc-hero-content {
+    flex: 1;
+    width: 50%;
+    /* Reduced bottom padding to tighten the space under the buttons */
+    padding: 60px 6% 20px 6%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    }
     /* subtle radial overlay */
     .pc-hero::before {
     content: '';
@@ -162,13 +171,6 @@
     pointer-events: none;
     }
 
-    .pc-hero-content {
-    flex: 1;
-    padding: var(--gap-2xl) var(--gap-2xl) var(--gap-2xl) clamp(24px, 6vw, 80px);
-    max-width: 600px;
-    position: relative;
-    z-index: 1;
-    }
 
     .pc-eyebrow {
     font-size: var(--text-caption);
@@ -210,20 +212,113 @@
     }
 
     .pc-hero-img-wrap {
-    flex-shrink: 0;
-    width: 45%;
-    max-width: 580px;
-    height: 530px;
-    overflow: hidden;
-    position: relative;
+        width: 50%;
+        height: 400px;
+        overflow: hidden;
     }
 
     .pc-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
+
+/* ── SECTION: NEWSLETTER (Modern Compact Design) ── */
+.newsletter-section {
+    width: 100%;
+    padding: 3rem 6%; 
+    background-color: #F8F6F0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.newsletter-inner {
+    width: 100%;
+    max-width: 1000px;
+    height: 250px; 
+    background-color: #9BB082; 
+    border-radius: 24px; 
+    padding: 1.5rem 3rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    gap: 1rem; 
+    box-shadow: 0 8px 24px rgba(155, 176, 130, 0.12);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.newsletter-text { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.4rem; 
+}
+
+.newsletter-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2.15rem; 
+    font-weight: 700;
+    color: #232E21; 
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.newsletter-text p { 
+    font-family: var(--font-body);
+    font-size: 0.95rem; 
+    color: #4B5A47; 
+    max-width: 480px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 460px; 
+    box-sizing: border-box;
+}
+
+.newsletter-input {
+    flex: 1;
+    height: 48px; 
+    padding: 0 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #232E21;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+.newsletter-input::placeholder {
+    color: #8F978B;
+    opacity: 0.95;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(35, 46, 33, 0.08);
+    border-color: #232E21;
+}
+
+.newsletter-note {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: #4B5A47;
+    margin: 0;
+    opacity: 0.9;
+}
+
 
     /* ══════════════════════════════════════════
     SECTION 2: FILTER BAR

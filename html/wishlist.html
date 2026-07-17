@@ -21,40 +21,41 @@
   <link rel="stylesheet" href="../css/wishlist.css">
 </head>
 <body>
-   <!-- ── NAVBAR (exact copy from home page) ── -->
-<nav class="navbar">
-  <a href="../index.html" class="navbar-logo">
-    <img src="../images/logo/Logo.png" alt="Plantora" class="navbar-logo-img">
-  </a>
+<!-- ── NAVBAR ── -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">
+            <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
+            <span class="navbar-logo-text">Plantora</span>
+        </a>
 
-  <div class="navbar-links">
-    <a href="../index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="plant-care.html" class="active">Plant Care</a>
-    <a href="about.html">About us</a>
-    <a href="contact.html">Contact</a>
-  </div>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="../html/shop.html">Shop</a>
+            <a href="../html/plant-care.html">Plant Care</a>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/contact.html">Contact</a>
+        </div>
 
-  <div class="navbar-icons">
-    <div class="navbar-search">
-      <input type="text" placeholder="Search...">
-      <i class="ti ti-search"></i>
-    </div>
-    <a href="cart.html" style="position:relative;">
-      <i class="ti ti-shopping-cart"></i>
-      <span class="cart-badge" style="display:none;">0</span>
-    </a>
-    <a href="account.html">
-      <div class="navbar-profile">
-        <i class="ti ti-user"></i>
-      </div>
-    </a>
-  </div>
+        <div class="navbar-icons">
+            <div class="navbar-search">
+                <input type="text" placeholder="Search...">
+                <i class="ti ti-search"></i>
+            </div>
+            <a href="../html/cart.html" style="position:relative;">
+                <i class="ti ti-shopping-cart"></i>
+                <span class="cart-badge" style="display:none;">0</span>
+            </a>
+            <a href="../html/account.html">
+                <div class="navbar-profile" class="active">
+                    <i class="ti ti-user"></i>
+                </div>
+            </a>
+        </div>
 
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav> 
+        <button class="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
 
 <!-- ══════════════════════════════
      WISHLIST — MAIN CONTENT
@@ -190,68 +191,73 @@
   </div>
 </main>
 
-<!-- ── FOOTER (exact copy from home page) ── -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <div class="footer-logo-icon">
-          <i class="ti ti-leaf"></i>
+<!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="navbar-logo">
+                    <img src="../images/logo/Logo.png" alt="" class="navbar-logo-icon">
+                    <span class="navbar-logo-text">Plantora</span>
+                </a>
+                <br>
+                <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1Cxa1jgFwi/?mibextid=wwXIfr"><i class="ti ti-brand-facebook"></i></a> 
+                    <a href="https://www.instagram.com/plantora_cambodia?igsh=NDhqajFnNzA4eXZt&utm_source=qr"><i class="ti ti-brand-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@plantora_cambodia"><i class="ti ti-brand-tiktok"></i></a>
+                    <a href="http://www.youtube.com/@Plantora-cambodia"><i class="ti ti-brand-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Link</h4>
+                <a href="../html/index.html">Home</a>
+                <a href="../html/shop.html">Shop</a>
+                <a href="../html/plant-care.html">Plantcare</a>
+                <a href="../html/about.html">About Us</a>
+                <a href="../html/contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="../html/shop.html">Indoor</a>
+                <a href="../html/shop.html">Outdoor</a>
+                <a href="../html/shop.html">Succulent</a>
+                <a href="../html/shop.html">Herb</a>
+                <a href="../html/shop.html">Tropical</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <i class="ti ti-map-pin"></i>
+                    <span>St 909, Toul Kork, Phnom Penh</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-phone"></i>
+                    <span>+855 234-657-890</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-mail"></i>
+                    <span>plantoracambodia@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="ti ti-clock"></i>
+                    <span>Mon–Sun: 8am–6pm</span>
+                </div>
+            </div>
         </div>
-        <span>Plantora</span>
-      </div>
-      <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
-      <div class="footer-social">
-        <a href="#"><i class="ti ti-brand-facebook"></i></a>
-        <a href="#"><i class="ti ti-brand-instagram"></i></a>
-        <a href="#"><i class="ti ti-brand-tiktok"></i></a>
-        <a href="#"><i class="ti ti-brand-youtube"></i></a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Quick Link</h4>
-      <a href="../index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="plant-care.html">Plant Care</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Categories</h4>
-      <a href="shop.html">Indoor</a>
-      <a href="shop.html">Outdoor</a>
-      <a href="shop.html">Succulent</a>
-      <a href="shop.html">Herb</a>
-      <a href="shop.html">Tropical</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <div class="footer-contact-item">
-        <i class="ti ti-map-pin"></i>
-        <span>St 909, Toul Kork, Phnom Penh</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="ti ti-phone"></i>
-        <span>+855 234-657-890</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="ti ti-mail"></i>
-        <span>plantorashop@gmail.com</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="ti ti-clock"></i>
-        <span>Mon–Sun: 8am–6pm</span>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Plantora Shop. All rights reserved.</p>
-    <p>Made with 🌱 by the Plantora team</p>
-  </div>
-</footer>
+        <div class="footer-bottom">
+            <p>© 2026 Plantora Shop. All rights reserved.</p>
+            <p>Made with 🌱 by the Plantora team</p>
+        </div>
+    </footer>
 
-<!-- JS: same as home page, using ../ paths -->
-<script src="../js/main.js"></script>
-<script src="../js/auth.js"></script>
+    <!-- Scripts organized correctly -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/plant-care.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/navbar.js"></script>
+
 </body>
 </html>
