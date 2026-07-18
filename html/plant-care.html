@@ -323,18 +323,18 @@
 
     <!-- ── SECTION 6: NEWSLETTER ── -->
     <section class="newsletter-section">
-        <div class="container">
-        <div class="newsletter-inner">
-            <div class="newsletter-text">
-            <h2>Stay in the Loop</h2>
-            <p>Get plant care tips, new arrivals, and exclusive deals in your inbox.</p>
+        <div class="newsletter-container">
+            <div class="newsletter-header">
+                <h2 class="newsletter-heading">Get the GreenVibe in Your Inbox</h2>
+                <p class="newsletter-description">Plant tips, new arrivals, and exclusive deals.</p>
             </div>
-            <form class="newsletter-form" onsubmit="return false;">
-            <input type="email" placeholder="Your email address" class="newsletter-input">
-            <button type="submit" class="btn-pill btn-pill-dark">Subscribe</button>
-            </form>
-            <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
-        </div>
+            <div class="newsletter-action-wrapper">
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <p class="newsletter-note">No spam, just green goodness. Unsubscribe anytime.</p>
+            </div>
         </div>
     </section>
 

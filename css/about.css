@@ -31,7 +31,7 @@
 .story-hero {
   position: relative;
   width: 100%;
-  min-height: 600px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   padding: 80px 0;
@@ -89,21 +89,22 @@
   align-items: center;
   justify-content: center;
   padding: 14px 36px;
-  background-color: var(--color-deep-dark);
+  background-color: var(--color-dark-green);
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: var(--text-button);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(43, 52, 36, 0.15);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-card);
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 .contact-btn:hover {
-  background-color: var(--color-dark-green);
+  /* Using a slightly darker shade if needed, or keeping the primary green */
+  background-color: var(--color-footer); 
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(43, 52, 36, 0.25);
 }
