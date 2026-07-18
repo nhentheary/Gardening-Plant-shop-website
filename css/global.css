@@ -19,9 +19,9 @@
 
     /* Logo */
     .navbar-logo {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         text-decoration: none;
         flex-shrink: 0;
     }
@@ -32,14 +32,10 @@
     }
 
     .navbar-logo-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--color-light-green);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    width: auto;
+    height: 38px;
+    object-fit: contain;
+    display: block;
     }
 
     .navbar-logo-icon i {
@@ -48,11 +44,12 @@
     }
 
     .navbar-logo span {
-    font-family: var(--font-heading);
-    font-size: 18px;
-    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
     color: var(--navbar-text);
-    letter-spacing: 1px;
+    letter-spacing: 0.03em;
+    line-height: 1;
     }
 
     /* Nav links — centered */

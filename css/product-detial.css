@@ -20,6 +20,39 @@ body{
     color:#222;
 }
 
+/* Shared home-page branding for the navbar and footer */
+body .navbar-logo{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+}
+
+body .navbar-logo-icon{
+    width:auto;
+    height:38px;
+    object-fit:contain;
+    display:block;
+}
+
+body .navbar-logo-text{
+    color:var(--color-white);
+    font-family:'Playfair Display', Georgia, serif;
+    font-size:26px;
+    font-weight:500;
+    letter-spacing:.03em;
+    line-height:1;
+}
+
+body .navbar-logo:hover .navbar-logo-icon{
+    transform:rotate(3deg) scale(1.05);
+    transition:transform .2s ease;
+}
+
+body .navbar-logo:hover .navbar-logo-text{
+    color:var(--color-light-green);
+}
+
 /* ==========================
    NAVBAR
 ========================== */
@@ -30,8 +63,6 @@ header{
 }
 
 .navbar{
-    max-width:1400px;
-    margin:auto;
     height:70px;
     display:flex;
     justify-content:space-between;

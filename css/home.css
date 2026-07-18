@@ -1119,6 +1119,7 @@
 .hero-title { margin-bottom: clamp(16px, 2vw, 24px); }
 .hero-subtitle { margin-bottom: clamp(24px, 3vw, 36px); }
 .hero-buttons { gap: 12px; }
+.hero-category-links { justify-content: flex-start; }
 
 .btn-pill,
 .btn-pill-outline-dark {
@@ -1227,7 +1228,7 @@
     .navbar-links.open { display: flex; }
 
     /* 2. Hero Section - Vertical Flow */
-    .hero { height: auto; min-height: 500px; align-items: center; text-align: center; }
+    .hero { height: auto; min-height: 500px; align-items: center; text-align: left; }
     .hero-content { padding: 20px; max-width: 100%; }
     .hero-title { font-size: 32px; }
     .hero-buttons { flex-direction: column; gap: 10px; width: 100%; }

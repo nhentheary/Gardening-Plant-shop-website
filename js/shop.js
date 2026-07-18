@@ -153,9 +153,21 @@ const products = [
     category: "all",
     page: 1,
   };
+
+  const requestedFilter = new URLSearchParams(window.location.search).get("filter");
+  const validFilters = new Set(["all", "best", "new", "sale", "indoor", "outdoor", "succulents"]);
+  if (validFilters.has(requestedFilter)) {
+    state.filter = requestedFilter;
+  }
   
   const grid = document.getElementById("productGrid");
   const pagination = document.getElementById("pagination");
+
+  const initialFilterPill = document.querySelector(`.pill[data-filter="${state.filter}"]`);
+  if (initialFilterPill) {
+    document.querySelectorAll(".pill").forEach(p => p.classList.remove("active"));
+    initialFilterPill.classList.add("active");
+  }
   
   function starString(rating) {
     const full = Math.round(rating);
@@ -366,4 +378,3 @@ const products = [
   // Init
   renderProducts();
   updateCartBadge();
-  

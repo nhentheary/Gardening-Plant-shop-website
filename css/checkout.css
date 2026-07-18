@@ -103,13 +103,13 @@
   .card h3{
     margin-bottom:20px;
   }
-  label{
+  .left label{
     display:block;
     margin-top:15px;
     font-size:13px;
   }
-  input[type=text],
-  input[type=password]{
+  .left input[type=text],
+  .left input[type=password]{
     width:100%;
     padding:12px;
     margin-top:5px;
@@ -199,6 +199,17 @@
     border-radius: 8px;
     outline: none;
   }
+
+  /* Keep the shared navbar search field identical to the other pages. */
+  .navbar-search input[type="text"] {
+    width: 140px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: var(--navbar-text);
+  }
   .coupon button {
     width: 100px;
     margin-top: 0;
@@ -220,4 +231,3 @@
     grid-template-columns:1fr;
     }
   }
-  
