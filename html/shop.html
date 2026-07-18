@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantora — Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/shop.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+ <!-- ── NAVBAR ── -->
+ <nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo">
+        <img src="images/logo/Logo.png" alt="" class="navbar-logo-icon">
+        <span class="navbar-logo-text">Plantora</span>
+    </a>
+
+    <div class="navbar-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="plant-care.html">Plant Care</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="navbar-icons">
+        <div class="navbar-search">
+            <input type="text" placeholder="Search...">
+            <i class="ti ti-search"></i>
+        </div>
+        <a href="card.html" style="position:relative;">
+            <i class="ti ti-shopping-cart"></i>
+            <span class="cart-badge" style="display:none;">0</span>
+        </a>
+        <a href="account.html">
+            <div class="navbar-profile">
+                <i class="ti ti-user"></i>
+            </div>
+        </a>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>Find your perfect plant</h1>
+      <p>Bring nature closer to home with our thoughtfully selected plants. Every order is packed with care to help your garden grow beautifully.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-solid">Shop All</button>
+        <button class="btn btn-solid">Best Seller</button>
+        <button class="btn btn-solid">On Sale</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&q=80" alt="Potted plant on a wooden stand">
+    </div>
+  </div>
+</section>
+
+<!-- ================= FILTER BAR ================= -->
+<section class="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-pills" id="filterPills">
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="best">🔥 Best Sellers</button>
+      <button class="pill" data-filter="new">New Arrivals</button>
+      <button class="pill" data-filter="sale">💲 On Sale</button>
+      <button class="pill" data-filter="indoor">Indoor</button>
+      <button class="pill" data-filter="outdoor">Outdoor</button>
+      <button class="pill" data-filter="succulents">Succulents</button>
+    </div>
+
+    <div class="filter-selects">
+      <select id="sortFeature">
+        <option value="feature">Feature</option>
+        <option value="popular">Most Popular</option>
+        <option value="rating">Top Rated</option>
+      </select>
+      <select id="sortPrice">
+        <option value="price">Price</option>
+        <option value="low-high">Low to High</option>
+        <option value="high-low">High to Low</option>
+      </select>
+      <select id="filterCategory">
+        <option value="all">Category: All</option>
+        <option value="indoor">Indoor</option>
+        <option value="outdoor">Outdoor</option>
+        <option value="succulents">Succulents</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCT GRID ================= -->
+<section class="product-section">
+  <div class="product-grid" id="productGrid">
+    <!-- Cards injected by JS -->
+  </div>
+
+  <div class="pagination" id="pagination"></div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-copy">
+      <span class="eyebrow">Special Offer</span>
+      <h2>Get 10% Off Your First Order</h2>
+      <p>Join the Plantora community and receive exclusive offers, plant care tips, and early access to new arrivals.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="newsletter-image">
+      <img src="https://images.unsplash.com/photo-1463154545680-70ffcb2c3e18?w=500&q=80" alt="Large leafy plant in a white pot">
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="index.html" class="navbar-logo">
+                <img src="images/logo/Logo.png" alt="" class="navbar-logo-icon">
+                <span class="navbar-logo-text">Plantora</span>
+            </a>
+            <br>
+            <p>Plantora brings nature closer to you with a carefully selected collection of plants and gardening products. Grow, nurture, and enjoy a greener lifestyle with us.</p>
+            <div class="footer-social">
+                <a href="#"><i class="ti ti-brand-facebook"></i></a>
+                <a href="#"><i class="ti ti-brand-instagram"></i></a>
+                <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+                <a href="#"><i class="ti ti-brand-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Link</h4>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="plant-care.html">Plantcare</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h4>Categories</h4>
+            <a href="shop.html">Indoor</a>
+            <a href="shop.html">Outdoor</a>
+            <a href="shop.html">Succulent</a>
+            <a href="shop.html">Herb</a>
+            <a href="shop.html">Tropical</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="footer-contact-item">
+                <i class="ti ti-map-pin"></i>
+                <span>St 909, Toul Kork, Phnom Penh</span>
+            </div>
+            <div class="footer-contact-item">
+                <i class="ti ti-phone"></i>
+                <span>+855 234-657-890</span>
+            </div>
+            <div class="footer-contact-item">
+                <i class="ti ti-mail"></i>
+                <span>plantoracambodia@gmail.com</span>
+            </div>
+            <div class="footer-contact-item">
+                <i class="ti ti-clock"></i>
+                <span>Mon–Sun: 8am–6pm</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Plantora Shop. All rights reserved.</p>
+        <p>Made with 🌱 by the Plantora team</p>
+    </div>
+</footer>
+
+<script src="/js/shop.js"></script>
+</body>
+</html>

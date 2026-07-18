@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Plantora</title>
+    <link rel="stylesheet" href="./css/product-detial.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/product-detial.css">
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Plantora"></div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="plant-care.html">Plant Care</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="card.html" class="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" style="display:none;">0</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <section class="product-details">
+        <!-- Left Side -->
+       <div class="product-gallery">
+            <div class="main-image">
+                <img id="mainProductImage"src="images/monstera-main.png"alt="Monstera">
+            </div>
+
+            <div class="thumbnail-images" id="thumbnailImages">
+                <img src="images/plant1.png"class="thumbnail active"alt="Plant">
+                <img src="images/plant2.png"class="thumbnail"alt="Plant">
+                <img src="images/plant3.png"class="thumbnail"alt="Plant">
+                <img src="images/plant3.png"class="thumbnail"alt="Plant">
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="product-info">
+            <span class="category" id="productCategory">INDOOR PLANT</span>
+            <h1 id="productTitle">Monstera deliciosa</h1>
+        <!-- Rating -->
+
+            <div class="rating">
+                <div class="stars" id="productStars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                    <span id="reviewText">4.0 (125 review)</span>
+            </div>
+
+            <!-- Price -->
+            <div class="price">
+                <span class="new-price" id="newPrice">$12.00</span>
+
+                <span class="old-price" id="oldPrice">$24.00</span>
+            </div>
+
+            <!-- Description -->
+            <p class="description" id="productDescription">Monstera Deliciosa is a beginner-friendly plant
+                with iconic split leaves. It loves bright,
+                indirect light and occasional watering.</p>
+            <!-- Delivery -->
+
+            <h4>Get it by</h4>
+            <div class="delivery-options">
+                <div class="delivery-card">
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <div>
+                        <h5>Delivery</h5>
+                        <span>arrive in 2-3 days</span>
+                    </div>
+
+                </div>
+                <div class="delivery-card">
+                    <i class="fa-solid fa-store"></i>
+                    <div>
+                        <h5>Pick Up</h5>
+                        <span>ready today, in store</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Cart Area -->
+
+            <div class="cart-section">
+                <div class="quantity">
+                    <button id="minus">-</button>
+                    <span id="quantity">1</span>
+                    <button id="plus">+</button>
+                </div>
+
+                <button class="add-cart" id="addCartBtn" data-id="">Add to Cart</button>
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+
+            <!-- Plant Features -->
+
+            <div class="plant-features">
+            <div class="feature-box">
+                <i class="fa-solid fa-droplet"></i>
+
+                    <span>weekly</span>
+
+                </div>
+
+                <div class="feature-box">
+
+                    <i class="fa-regular fa-sun"></i>
+
+                    <span>bright indirect</span>
+
+                </div>
+
+                <div class="feature-box">
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                    <span>moderate humidity</span>
+
+                </div>
+
+                <div class="feature-box">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    <span>toxic to pets</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script src="/js/product-detial.js"></script>
+
+</body>
+</html>

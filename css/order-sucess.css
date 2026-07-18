@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+    }
+    
+body{
+    background:#d8e3db;
+}
+    
+/* ------- Navbar ----- */
+    
+header{
+    background:#0b6935;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+nav{
+    display:flex;
+    gap:30px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+.right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.search{
+    display:flex;
+    align-items:center;
+    background:white;
+    padding:8px 15px;
+    border-radius:30px;
+}
+.search input{
+    border:none;
+    outline:none;
+}
+    
+/* --------Success------- */
+
+.success{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:60px 20px;
+}
+.check-circle{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#fff8ec;
+    border:1px solid #0b6935;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:25px;
+}
+.check-circle i{
+    font-size:60px;
+    color:#0b6935;
+}
+.success h1{
+    font-size:34px;
+    margin-bottom:10px;
+    color:#222;
+}
+.success p{
+    color:#666;
+    margin-bottom:35px;
+}
+    
+/*------------ Receipt ------------------*/
+    
+.receipt{
+    background:#eef0dd;
+    width:420px;
+    max-width:100%;
+    padding:25px;
+    border-radius:12px;
+}
+.row,
+.item,
+.total{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+    font-size:15px;
+}
+.total{
+    font-weight:700;
+    font-size:22px;
+    color:#0b6935;
+}
+.receipt hr{
+    margin:18px 0;
+    border:none;
+    border-top:1px dashed #999;
+}
+    
+/*------------ Buttons --------------- */
+    
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+}
+button{
+    width:220px;
+    padding:14px;
+    border-radius:8px;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+.green{
+    background:#0b6935;
+    color:white;
+    border:none;
+}
+.green:hover{
+    background:#095229;
+}
+.white{
+    background:white;
+    border:1px solid #0b6935;
+    color:#0b6935;
+}
+.white:hover{
+    background:#0b6935;
+    color:white;
+}
+    
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    
+}
+    
+.buttons{
+    flex-direction:column;
+    width:100%;
+}
+button{
+    width:100%;
+}
+.success h1{
+    font-size:28px;
+    text-align:center;
+    
+    } 
+}
