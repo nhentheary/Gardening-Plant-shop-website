@@ -503,3 +503,108 @@
     @media (max-width: 480px) {
     .footer-grid { grid-template-columns: 1fr; }
     }
+
+    /* ══════════════════════════════
+    PROFILE DROPDOWN (My Account / Sign Out)
+    Appended next to the profile icon in .navbar-icons
+    ══════════════════════════════ */
+
+    .navbar-icons {
+    position: relative; /* anchors the dropdown below the icon row */
+    }
+
+    .profile-dropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    min-width: 220px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-modal);
+    overflow: hidden;
+    z-index: 200;
+    animation: profileDropdownIn 0.15s ease-out;
+    }
+
+    @keyframes profileDropdownIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-dropdown-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 14px 16px;
+    background: var(--color-green-tint);
+    border-bottom: 0.5px solid var(--color-warm-beige);
+    }
+
+    .profile-dropdown-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-deep-dark);
+    }
+
+    .profile-dropdown-email {
+    font-size: 12px;
+    color: var(--color-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    /* Scoped to .navbar-icons .profile-dropdown-item (not just .profile-dropdown-item)
+       on purpose: the dropdown is appended inside .navbar-icons, and global.css already
+       has a ".navbar-icons a" rule (for the search/cart/profile icons) that would
+       otherwise win the specificity fight against a single class selector and make
+       this text invisible/wrong-colored. */
+    .navbar-icons .profile-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-deep-dark);
+    opacity: 1;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s;
+    }
+
+    .navbar-icons .profile-dropdown-item i {
+    font-size: 16px;
+    color: var(--color-dark-green);
+    flex-shrink: 0;
+    }
+
+    .navbar-icons .profile-dropdown-item:hover {
+    background: var(--color-green-tint);
+    color: var(--color-deep-dark);
+    opacity: 1;
+    }
+
+    .navbar-icons .profile-dropdown-signout {
+    color: var(--color-danger);
+    border-top: 0.5px solid #eee;
+    }
+    .navbar-icons .profile-dropdown-signout i {
+    color: var(--color-danger);
+    }
+    .navbar-icons .profile-dropdown-signout:hover {
+    color: var(--color-danger);
+    }
+
+    /* mobile: keep dropdown from overflowing the viewport edge */
+    @media (max-width: 480px) {
+    .profile-dropdown {
+        min-width: 200px;
+        right: -8px;
+    }
+    }

@@ -14,6 +14,7 @@
   function getUsers() { return readStore(localStorage, USERS_KEY, []); }
   function homePath() { return window.location.pathname.includes('/html/') ? '../index.html' : 'index.html'; }
   function loginPath() { return window.location.pathname.includes('/html/') ? 'login.html' : 'html/login.html'; }
+  function accountPath() { return window.location.pathname.includes('/html/') ? 'account.html' : 'html/account.html'; }
   function field(id) { return document.getElementById(id); }
 
   window.showError = function (id, message) { const node = field(id); if (node) node.textContent = message; };
@@ -155,13 +156,83 @@
     const toast = document.createElement('div'); toast.id = 'plantora-toast'; toast.className = 'plantora-toast ' + (type === 'error' ? 'is-error' : ''); toast.setAttribute('role', 'status'); toast.textContent = message;
     document.body.appendChild(toast); window.setTimeout(() => toast.remove(), 3000);
   };
+
+  /* ── PROFILE DROPDOWN (My Account / Sign Out) ── */
+
+  function closeProfileMenu() {
+    field('profileDropdown')?.remove();
+    document.removeEventListener('click', handleOutsideProfileClick, true);
+    const trigger = document.querySelector('.navbar-icons a[href*="account"]');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+  }
+
+  function handleOutsideProfileClick(event) {
+    const menu = field('profileDropdown');
+    const trigger = document.querySelector('.navbar-icons a[href*="account"]');
+    if (menu && !menu.contains(event.target) && trigger && !trigger.contains(event.target)) {
+      closeProfileMenu();
+    }
+  }
+
+  function toggleProfileMenu(anchorEl, session) {
+    if (field('profileDropdown')) { closeProfileMenu(); return; }
+
+    const menu = document.createElement('div');
+    menu.id = 'profileDropdown';
+    menu.className = 'profile-dropdown';
+    menu.setAttribute('role', 'menu');
+    menu.innerHTML =
+      '<div class="profile-dropdown-header">' +
+        '<span class="profile-dropdown-name">' + (session.name || 'Plant Parent') + '</span>' +
+        '<span class="profile-dropdown-email">' + (session.email || '') + '</span>' +
+      '</div>' +
+      '<a href="' + accountPath() + '" class="profile-dropdown-item" role="menuitem"><i class="ti ti-user"></i> My Account</a>' +
+      '<button type="button" class="profile-dropdown-item profile-dropdown-signout" role="menuitem"><i class="ti ti-logout"></i> Sign Out</button>';
+
+    // append to the icon row, not inside the <a> itself — nesting a link/button
+    // inside an anchor is invalid HTML and unreliable across browsers
+    anchorEl.parentElement.appendChild(menu);
+    anchorEl.setAttribute('aria-expanded', 'true');
+
+    menu.querySelector('.profile-dropdown-signout').addEventListener('click', function (event) {
+      event.stopPropagation();
+      closeProfileMenu();
+      window.showLogoutModal();
+    });
+
+    // wait a tick so this same click doesn't immediately trigger the outside-click close
+    window.setTimeout(function () {
+      document.addEventListener('click', handleOutsideProfileClick, true);
+    }, 0);
+  }
+
   window.updateNavAuth = function () {
     const profileLink = document.querySelector('.navbar-icons a[href*="account"]');
     if (!profileLink) return;
-    const session = window.checkAuth(); const profile = profileLink.querySelector('.navbar-profile');
-    if (session) { profileLink.href = '#'; profileLink.onclick = (event) => { event.preventDefault(); window.showLogoutModal(); }; if (profile) profile.innerHTML = '<span>' + (session.name?.charAt(0).toUpperCase() || 'P') + '</span>'; }
-    else { profileLink.href = loginPath(); profileLink.onclick = null; }
+    closeProfileMenu();
+
+    const session = window.checkAuth();
+    const profile = profileLink.querySelector('.navbar-profile');
+
+    if (session) {
+      profileLink.href = '#';
+      profileLink.setAttribute('aria-haspopup', 'true');
+      profileLink.setAttribute('aria-expanded', 'false');
+      profileLink.onclick = function (event) {
+        event.preventDefault();
+        toggleProfileMenu(profileLink, session);
+      };
+      if (profile) profile.innerHTML = '<span>' + (session.name?.charAt(0).toUpperCase() || 'P') + '</span>';
+    } else {
+      profileLink.href = loginPath();
+      profileLink.onclick = null;
+      profileLink.removeAttribute('aria-haspopup');
+      profileLink.removeAttribute('aria-expanded');
+    }
   };
-  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') window.closeLogoutModal(); });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { window.closeLogoutModal(); closeProfileMenu(); }
+  });
   document.addEventListener('DOMContentLoaded', window.updateNavAuth);
 }());
