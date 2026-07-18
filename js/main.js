@@ -23,11 +23,17 @@ document.querySelectorAll('.navbar-links a').forEach(link => {
 
 // ── CART BADGE ──
 function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem('plantora-cart')) || [];
+    let cart = [];
+    try {
+        cart = JSON.parse(localStorage.getItem('plantoraCart')) || [];
+    } catch {
+        cart = [];
+    }
     const badge = document.querySelector('.cart-badge');
     if (badge) {
-        badge.textContent = cart.length;
-        badge.style.display = cart.length > 0 ? 'flex' : 'none';
+        const total = cart.reduce((sum, item) => sum + (item.qty || 0), 0);
+        badge.textContent = total;
+        badge.style.display = total > 0 ? 'flex' : 'none';
     }
 }
 updateCartCount();

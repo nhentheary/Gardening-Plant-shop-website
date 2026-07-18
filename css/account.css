@@ -48,6 +48,16 @@
   margin: 0 auto var(--gap-md);
 }
 
+.account-avatar-initials {
+  display: grid;
+  place-items: center;
+  background: var(--color-green-tint);
+  color: var(--color-dark-green);
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+}
+
 .account-user-name {
   font-family: var(--font-heading);
   font-size: var(--text-h3);

@@ -38,7 +38,7 @@ body .navbar-logo-icon{
 body .navbar-logo-text{
     color:var(--color-white);
     font-family:'Playfair Display', Georgia, serif;
-    font-size:26px;
+    font-size:18px;
     font-weight:500;
     letter-spacing:.03em;
     line-height:1;

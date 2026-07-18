@@ -231,8 +231,104 @@
     }
   };
 
+  function populateAccountSidebar() {
+    if (!document.querySelector('.account-page')) return;
+
+    const session = window.checkAuth();
+    if (!session) {
+      window.location.href = 'login.html';
+      return;
+    }
+
+    const user = getUsers().find((item) => item.email === session.email);
+    if (!user) return;
+
+    const fullName = [user.firstName, user.lastName].filter(Boolean).join(' ') || 'Plant Parent';
+    const initials = [user.firstName, user.lastName]
+      .filter(Boolean)
+      .map((name) => name.charAt(0).toUpperCase())
+      .join('') || 'P';
+    document.querySelectorAll('.account-user-name').forEach((node) => { node.textContent = fullName; });
+    document.querySelectorAll('.account-user-email').forEach((node) => { node.textContent = user.email || ''; });
+    document.querySelectorAll('.account-avatar-initials').forEach((node) => { node.textContent = initials; });
+  }
+
+  function populateAccountPage() {
+    const form = field('profileForm');
+    if (!form) return;
+
+    const session = window.checkAuth();
+    if (!session) {
+      window.location.href = 'login.html';
+      return;
+    }
+
+    const user = getUsers().find((item) => item.email === session.email);
+    if (!user) return;
+
+    function fillProfile(currentUser) {
+      field('firstName').value = currentUser.firstName || '';
+      field('lastName').value = currentUser.lastName || '';
+      field('email').value = currentUser.email || '';
+      field('phone').value = currentUser.phone || '';
+      field('address').value = currentUser.address || '';
+
+      const fullName = [currentUser.firstName, currentUser.lastName].filter(Boolean).join(' ') || 'Plant Parent';
+      const initials = [currentUser.firstName, currentUser.lastName]
+        .filter(Boolean)
+        .map((name) => name.charAt(0).toUpperCase())
+        .join('') || 'P';
+      const nameDisplay = document.querySelector('.account-user-name');
+      const emailDisplay = document.querySelector('.account-user-email');
+      const avatar = document.querySelector('.account-avatar-initials');
+      if (nameDisplay) nameDisplay.textContent = fullName;
+      if (emailDisplay) emailDisplay.textContent = currentUser.email || '';
+      if (avatar) avatar.textContent = initials;
+    }
+
+    fillProfile(user);
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const updatedUser = {
+        ...user,
+        firstName: field('firstName').value.trim(),
+        lastName: field('lastName').value.trim(),
+        email: field('email').value.trim().toLowerCase(),
+        phone: field('phone').value.trim(),
+        address: field('address').value.trim()
+      };
+      const users = getUsers();
+      const duplicateEmail = users.some((item) => item.email === updatedUser.email && item.email !== user.email);
+      if (duplicateEmail) {
+        window.showToast('That email is already linked to another account.', 'error');
+        return;
+      }
+
+      const updatedUsers = users.map((item) => item.email === user.email ? updatedUser : item);
+      localStorage.setItem(USERS_KEY, JSON.stringify(updatedUsers));
+      const updatedSession = { email: updatedUser.email, name: updatedUser.firstName, loggedIn: true };
+      const sessionStore = localStorage.getItem(SESSION_KEY) ? localStorage : sessionStorage;
+      sessionStore.setItem(SESSION_KEY, JSON.stringify(updatedSession));
+      user.firstName = updatedUser.firstName;
+      user.lastName = updatedUser.lastName;
+      user.email = updatedUser.email;
+      user.phone = updatedUser.phone;
+      user.address = updatedUser.address;
+      fillProfile(user);
+      window.updateNavAuth();
+      window.showToast('Profile details saved.');
+    });
+  }
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') { window.closeLogoutModal(); closeProfileMenu(); }
   });
-  document.addEventListener('DOMContentLoaded', window.updateNavAuth);
+  document.addEventListener('DOMContentLoaded', function () {
+    window.updateNavAuth();
+    populateAccountSidebar();
+    populateAccountPage();
+  });
 }());

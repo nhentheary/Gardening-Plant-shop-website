@@ -752,7 +752,26 @@
 .auth-hero { position: relative; z-index: 1; height: 31vh; min-height: 190px; display: grid; place-items: center; padding-top: 28px; }
 .auth-hero a { color: var(--color-deep-dark); font: 700 clamp(22px, 3vw, 28px)/1 var(--font-body); text-decoration: none; }
 .auth-close { position: absolute; z-index: 3; top: 18px; right: 22px; display: grid; place-items: center; width: 36px; height: 36px; border: 2px solid var(--color-white); border-radius: 50%; background: var(--color-dark-green); color: var(--color-white); box-shadow: var(--shadow-card); font-size: 23px; transition: transform .2s ease, background .2s ease; }
+.auth-close svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 .auth-close:hover { background: var(--color-footer); transform: scale(1.08); }
+.auth-close:hover svg { animation: auth-back-nudge .45s ease; }
+.auth-hero { animation: auth-fade-up .55s ease both; }
+.auth-card.auth-panel { animation: auth-fade-up .6s .12s ease both; }
+
+@keyframes auth-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes auth-back-nudge {
+  50% { transform: translateX(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-hero,
+  .auth-card.auth-panel,
+  .auth-close:hover svg { animation: none; }
+}
 .auth-card.auth-panel { width: min(100%, 374px); max-width: 374px; margin: calc(-1 * clamp(20px, 4vh, 42px)) auto 0; padding: 22px 40px 26px; border: 0; border-radius: 24px; box-shadow: 0 3px 3px rgba(43,52,36,.24); }
 .auth-card.auth-panel::before { display: none; }
 .auth-tabs { display: flex; justify-content: space-between; margin: 0 0 32px; }

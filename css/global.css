@@ -45,7 +45,7 @@
 
     .navbar-logo span {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--navbar-text);
     letter-spacing: 0.03em;

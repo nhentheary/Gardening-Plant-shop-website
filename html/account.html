@@ -66,9 +66,9 @@
     <!-- ── SIDEBAR (reuse on Wishlist / Orders / Address / Settings) ── -->
     <aside class="account-sidebar">
       <div class="account-user">
-        <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Sopheak Lim" class="account-avatar">
-        <h3 class="account-user-name">Sopheak Lim</h3>
-        <p class="account-user-email">sopheak.lim@gmail.com</p>
+        <div class="account-avatar account-avatar-initials" aria-hidden="true">P</div>
+        <h3 class="account-user-name">Plant Parent</h3>
+        <p class="account-user-email"></p>
       </div>
 
       <nav class="account-nav">
@@ -101,15 +101,15 @@
       <div class="account-stats">
         <div class="stat-card">
           <p class="stat-label">Orders</p>
-          <p class="stat-value">12</p>
+          <p class="stat-value">0</p>
         </div>
         <div class="stat-card">
           <p class="stat-label">Wishlist</p>
-          <p class="stat-value">3</p>
+          <p class="stat-value">0</p>
         </div>
         <div class="stat-card">
           <p class="stat-label">Total Spent</p>
-          <p class="stat-value">$130.57</p>
+          <p class="stat-value">$0.00</p>
         </div>
       </div>
 
@@ -117,32 +117,32 @@
       <div class="profile-card">
         <h2 class="profile-title">Profile Details</h2>
 
-        <form class="profile-form">
+        <form class="profile-form" id="profileForm">
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name</label>
-              <input type="text" id="firstName" value="Sopheak">
+              <input type="text" id="firstName" autocomplete="given-name" required>
             </div>
             <div class="form-group">
               <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" value="Lim">
+              <input type="text" id="lastName" autocomplete="family-name" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" value="sopheak.lim@gmail.com">
+              <input type="email" id="email" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" value="+855 12 345 678">
+              <input type="tel" id="phone" autocomplete="tel">
             </div>
           </div>
 
           <div class="form-group">
             <label for="address">Delivery Address</label>
-            <input type="text" id="address" value="St 15, Toul Kork, Phnom Penh, Cambodia">
+            <input type="text" id="address" autocomplete="street-address">
           </div>
 
           <div class="form-actions">
@@ -216,13 +216,9 @@
     </footer>
 
     <!-- Scripts organized correctly -->
-    <script src="js/main.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/plant-care.js"></script>
-    <script src="js/shop.js"></script>
-    <script src="js/navbar.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/navbar.js"></script>
 
 </body>
 </html>

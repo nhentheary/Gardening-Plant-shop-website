@@ -45,6 +45,46 @@ document.addEventListener("DOMContentLoaded", () => {
     // -------------------------------------------------------------
     const tabButtons = document.querySelectorAll(".products-tabs .tab-btn");
     const productsGrid = document.getElementById("productsGrid");
+    const CART_KEY = "plantoraCart";
+
+    function productId(plant) {
+        // A stable numeric id lets the cart recognise the same plant across tabs.
+        return Array.from(plant.name.trim()).reduce((id, char) => ((id * 31) + char.charCodeAt(0)) >>> 0, 7);
+    }
+
+    function getCart() {
+        try {
+            return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+        } catch {
+            return [];
+        }
+    }
+
+    function updateCartBadge() {
+        const badge = document.querySelector(".cart-badge");
+        if (!badge) return;
+
+        const total = getCart().reduce((sum, item) => sum + item.qty, 0);
+        badge.textContent = total;
+        badge.style.display = total > 0 ? "flex" : "none";
+    }
+
+    function addToCart(plant) {
+        const id = productId(plant);
+        const cart = getCart();
+        const existingItem = cart.find(item => item.id === id);
+
+        if (existingItem) {
+            existingItem.qty += 1;
+        } else {
+            // Cart is rendered from html/cart.html, so its local image path needs
+            // to be relative to that page rather than the home page.
+            cart.push({ id, name: plant.name.trim(), price: plant.price, image: `../${plant.img}`, qty: 1 });
+        }
+
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        updateCartBadge();
+    }
 
     function renderCategory(categoryKey) {
         if (!productsGrid) return;
@@ -76,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <i class="ti ti-star"></i><span>4.8</span>
                             </div>
                         </div>
-                        <button class="btn-add-cart"><i class="ti ti-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn-add-cart" type="button" data-product-id="${productId(plant)}"><i class="ti ti-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
             `;
@@ -84,6 +124,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         attachWishlistListeners();
     }
+
+    productsGrid.addEventListener("click", (event) => {
+        const button = event.target.closest(".btn-add-cart");
+        if (!button) return;
+
+        const plant = Object.values(plantData)
+            .flat()
+            .find(item => productId(item) === Number(button.dataset.productId));
+        if (!plant) return;
+
+        addToCart(plant);
+
+        const originalMarkup = button.innerHTML;
+        button.innerHTML = '<i class="ti ti-check"></i> Added';
+        button.disabled = true;
+
+        window.setTimeout(() => {
+            button.innerHTML = originalMarkup;
+            button.disabled = false;
+        }, 1200);
+    });
 
     // Tab Event Listeners
     tabButtons.forEach(button => {
@@ -110,4 +171,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize display
     renderCategory("all");
+    updateCartBadge();
 });
