@@ -11,10 +11,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: sticky;
+        position: fixed !important;
         top: 0;
-        z-index: 100;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
         border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    }
+
+    /* Reserve space for the fixed navbar on every page that uses it. */
+    body {
+        padding-top: var(--navbar-height);
     }
 
     /* Logo */
@@ -449,6 +456,8 @@
     }
 
     @media (max-width: 768px) {
+    :root { --navbar-height: 56px; }
+
     .navbar { padding: 0 var(--gap-md); }
 
     .navbar-links {
