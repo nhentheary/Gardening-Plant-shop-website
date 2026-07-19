@@ -1243,7 +1243,7 @@
         display: none;
         position: fixed;
         top: 56px; left: 0; right: 0;
-        background: var(--color-cream);
+        background: var(--color-deep-dark);
         flex-direction: column;
         padding: var(--gap-lg);
         gap: var(--gap-md);
@@ -1251,6 +1251,8 @@
         box-shadow: 0 4px 20px rgba(43,52,36,0.1);
     }
     .navbar-links.open { display: flex; }
+
+
 
     /* 2. Hero Section - Vertical Flow */
     .hero { height: auto; min-height: 500px; align-items: center; text-align: left; }
