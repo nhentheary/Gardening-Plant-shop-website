@@ -326,7 +326,7 @@
 
 @media (max-width: 992px) {
 
-    .contact-grid {
+    .contact-card {
         grid-template-columns: 1fr;
     }
 
@@ -361,5 +361,20 @@
 
     .directions-button {
         width: 100%;
+    }
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .map-card iframe {
+        height: 280px;
     }
 }
