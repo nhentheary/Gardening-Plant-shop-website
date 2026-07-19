@@ -605,3 +605,40 @@
         right: -8px;
     }
     }
+
+    /* ══════════════════════════════
+    SHARED RESPONSIVE SAFETY
+    Keeps every page within the viewport on small screens.
+    ══════════════════════════════ */
+    html { overflow-x: hidden; }
+
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    img, picture, video, canvas, svg, iframe {
+        max-width: 100%;
+    }
+
+    input, select, textarea, button { max-width: 100%; }
+
+    @media (max-width: 768px) {
+    .container {
+        width: min(100% - 32px, 1200px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar-icons { gap: 12px; }
+    .navbar-icons a { font-size: 19px; }
+
+    .footer-brand p,
+    .footer-contact-item span { overflow-wrap: anywhere; }
+    }
+
+    @media (max-width: 480px) {
+    .navbar-logo-text { font-size: 17px; }
+    .navbar-logo-icon { height: 34px; }
+    .navbar-icons { gap: 10px; }
+    }

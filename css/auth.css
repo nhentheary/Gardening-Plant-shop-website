@@ -682,6 +682,11 @@
 @keyframes slideInRight { from { transform: translateX(24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
 .logout-page-card { max-width: 390px; text-align: center; }
+
+/* Shared mobile safety for login, registration, and logout pages. */
+html, body { overflow-x: hidden; }
+img, svg { max-width: 100%; }
+input, select, textarea, button { max-width: 100%; }
 .logout-page-card .logout-modal-icon { margin-bottom: 16px; }
 .logout-page-card .auth-subtitle { margin-bottom: 24px; }
 .logout-link { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }

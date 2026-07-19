@@ -631,6 +631,68 @@
 
 .btn-danger:hover { opacity: 0.85; }
 
+/* Account area — contact form sizing and typography */
+.account-page {
+  font-family: var(--font-body);
+  padding: 60px 20px 72px;
+}
+
+.account-layout { max-width: 1100px; gap: 24px; }
+
+.account-sidebar {
+  background: #9BB082;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.account-user { border-color: rgba(84, 107, 65, .18); }
+.account-avatar { width: 82px; height: 82px; margin-bottom: 12px; border-color: var(--color-dark-green); }
+.account-avatar-initials { font-family: var(--font-body); font-size: 30px; }
+.account-user-name, .account-title, .profile-title, .stat-label, .stat-value,
+.order-id, .order-total, .address-label { font-family: var(--font-body); }
+.account-user-name { color: var(--color-deep-dark); font-size: 1.05rem; font-weight: 600; }
+.account-user-email { color: var(--color-muted); }
+.account-nav-link { padding: 11px 12px; border-radius: 10px; color: var(--color-deep-dark); font-size: .9rem; }
+.account-nav-link:hover { background: rgba(255,255,255,.4); }
+.account-nav-link.active { background: var(--color-dark-green); color: var(--color-white); }
+
+.account-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 20px; }
+.stat-card, .profile-card, .order-row, .address-card {
+  border: 1px solid rgba(84,107,65,.12);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+}
+.stat-card { padding: 24px; }
+.stat-label { font-size: .9rem; font-weight: 600; margin-bottom: 6px; }
+.stat-value { font-size: 1.65rem; font-weight: 600; }
+.profile-card { padding: 32px; }
+.profile-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; }
+.form-group label { color: var(--color-deep-dark); font-size: .85rem; font-weight: 600; }
+.form-group input, .order-filter {
+  border-color: rgba(84,107,65,.2);
+  border-radius: 10px;
+  font-size: .9rem;
+}
+.form-group input { padding: 11px 14px; }
+.btn-save, .btn-ghost, .btn-reorder, .btn-delete, .btn-danger {
+  font-family: var(--font-body);
+  font-size: .9rem;
+  padding: 11px 20px;
+}
+.order-row { padding: 20px; }
+.order-thumb { width: 52px; height: 52px; border-radius: 12px; }
+.order-id, .address-label { font-size: 1rem; font-weight: 600; }
+.order-total { font-size: 1rem; font-weight: 600; }
+.address-card { padding: 28px; }
+.address-add { border-radius: 24px; font-size: .9rem; }
+.toggle-text h3 { font-family: var(--font-body); font-size: .95rem; }
+
+@media (max-width: 768px) {
+  .account-page { padding: 36px 16px 48px; }
+  .account-sidebar, .profile-card { padding: 24px; }
+  .account-title { font-size: 1.45rem; }
+}
+
 /* ══════════════════════════════
    RESPONSIVE
    ══════════════════════════════ */

@@ -1,4 +1,5 @@
 const CART_KEY = "plantoraCart";
+const LAST_ORDER_KEY = "plantoraLastOrder";
 let checkoutDiscount = 0;
 
 function getCart() {
@@ -79,11 +80,23 @@ function renderCheckoutItems() {
   updateCartBadge();
 }
 
+function updateCardDetails() {
+  const selectedPayment = document.querySelector('input[name="payment"]:checked');
+  const cardDetails = document.getElementById("cardDetails");
+  const showCardDetails = selectedPayment?.value === "Credit / Debit Card";
+
+  cardDetails.hidden = !showCardDetails;
+  cardDetails.querySelectorAll("input").forEach((input) => {
+    input.disabled = !showCardDetails;
+  });
+}
+
 document.querySelectorAll(".payment").forEach((payment) => {
   payment.addEventListener("click", () => {
     document.querySelectorAll(".payment").forEach((item) => item.classList.remove("active"));
     payment.classList.add("active");
     payment.querySelector("input").checked = true;
+    updateCardDetails();
   });
 });
 
@@ -103,10 +116,41 @@ document.getElementById("applyCouponBtn").addEventListener("click", () => {
 });
 
 document.getElementById("orderBtn").addEventListener("click", () => {
-  if (!getCart().length) return;
-  alert("🎉 Your order has been placed successfully!");
+  const cart = getCart();
+  if (!cart.length) return;
+
+  const delivery = {
+    name: document.getElementById("fullName").value.trim(),
+    address: document.getElementById("streetAddress").value.trim(),
+    city: document.getElementById("city").value.trim(),
+    phone: document.getElementById("phone").value.trim()
+  };
+
+  if (Object.values(delivery).some((value) => !value)) {
+    alert("Please complete your delivery details before placing your order.");
+    return;
+  }
+
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const deliveryDate = new Date();
+  deliveryDate.setDate(deliveryDate.getDate() + 4);
+  const payment = document.querySelector('input[name="payment"]:checked').value;
+  const order = {
+    id: `PL-${Date.now().toString().slice(-6)}`,
+    items: cart,
+    subtotal,
+    discount: checkoutDiscount,
+    total: Math.max(0, subtotal - checkoutDiscount),
+    delivery,
+    payment,
+    estimatedDelivery: deliveryDate.toISOString(),
+    placedAt: new Date().toISOString()
+  };
+
+  localStorage.setItem(LAST_ORDER_KEY, JSON.stringify(order));
   localStorage.removeItem(CART_KEY);
-  window.location.href = "order-sucess.html";
+  window.location.href = "order-success.html";
 });
 
 renderCheckoutItems();
+updateCardDetails();

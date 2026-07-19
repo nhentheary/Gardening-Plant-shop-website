@@ -13,18 +13,19 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/global.css">
 </head>
-<body>
+<body class="commerce-page checkout-page">
 
   <!-- Navbar -->
   <nav class="navbar">
     <a href="../index.html" class="navbar-logo"><img src="../images/logo/Logo.png" alt="Plantora" class="navbar-logo-icon"><span class="navbar-logo-text">Plantora</span></a>
-    <div class="navbar-links"><a href="../index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="plant-care.html">Plant Care</a><a href="about.html">About us</a><a href="contact.html">Contact</a></div>
+    <div class="navbar-links"><a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="plant-care.html">Plant Care</a><a href="about.html">About us</a><a href="contact.html">Contact</a></div>
     <div class="navbar-icons"><div class="navbar-search"><input type="text" placeholder="Search..."><i class="ti ti-search"></i></div><a href="cart.html" style="position:relative;"><i class="ti ti-shopping-cart"></i><span class="cart-badge" style="display:none;">0</span></a><a href="account.html"><div class="navbar-profile"><i class="ti ti-user"></i></div></a></div>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
+  <main>
   <!-- Progress -->
-  <section class="progress">
+  <section class="progress" aria-label="Checkout progress">
 
     <div class="step done">
       <div><i class="fa fa-check"></i></div>
@@ -57,19 +58,19 @@
         <h3>Delivery Details</h3>
 
         <label>Full Name</label>
-        <input type="text" placeholder="Bopha Tep">
+        <input id="fullName" type="text" placeholder="Bopha Tep" autocomplete="name" required>
 
         <label>Street Address</label>
-        <input type="text" placeholder="Street 101, Toul Kork">
+        <input id="streetAddress" type="text" placeholder="Street 101, Toul Kork" autocomplete="street-address" required>
 
         <div class="row">
           <div>
             <label>City</label>
-            <input type="text" placeholder="Phnom Penh">
+            <input id="city" type="text" placeholder="Phnom Penh" autocomplete="address-level2" required>
           </div>
           <div>
             <label>Phone</label>
-            <input type="text" placeholder="096 657 9824">
+            <input id="phone" type="tel" placeholder="096 657 9824" autocomplete="tel" required>
           </div>
         </div>
       </div>
@@ -79,34 +80,36 @@
         <h3>Payment Method</h3>
 
         <div class="payment active">
-          <input type="radio" checked name="payment">
+          <input type="radio" checked name="payment" value="Credit / Debit Card">
           <span>Credit / Debit Card</span>
           <i class="fa-regular fa-credit-card"></i>
         </div>
 
         <div class="payment">
-          <input type="radio" name="payment">
+          <input type="radio" name="payment" value="Bank Transfer">
           <span>Bank Transfer</span>
           <i class="fa-solid fa-building-columns"></i>
         </div>
 
         <div class="payment">
-          <input type="radio" name="payment">
+          <input type="radio" name="payment" value="Cash on Delivery">
           <span>Cash on Delivery</span>
           <i class="fa-solid fa-money-bill-wave"></i>
         </div>
 
-        <label>Card Number</label>
-        <input type="text" placeholder="1234 5678 8888 6654">
+        <div id="cardDetails">
+          <label>Card Number</label>
+          <input type="text" placeholder="1234 5678 8888 6654" autocomplete="cc-number">
 
-        <div class="row">
-          <div>
-            <label>Expiry Date</label>
-            <input type="text" placeholder="MM / YY">
-          </div>
-          <div>
-            <label>CVV</label>
-            <input type="password" placeholder="123">
+          <div class="row">
+            <div>
+              <label>Expiry Date</label>
+              <input type="text" placeholder="MM / YY" autocomplete="cc-exp">
+            </div>
+            <div>
+              <label>CVV</label>
+              <input type="password" placeholder="123" autocomplete="cc-csc">
+            </div>
           </div>
         </div>
       </div>
@@ -143,10 +146,11 @@
         <span id="total">$20.98</span>
       </div>
 
-      <button id="orderBtn">Place Order</button>
+      <button id="orderBtn" type="button">Place Order</button>
     </div>
 
   </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-grid">

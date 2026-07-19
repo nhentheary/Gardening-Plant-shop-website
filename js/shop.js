@@ -130,18 +130,18 @@ function renderPlants(type) {
 ========================================================= */
 
 const products = [
-    { id: 1, name: "Echeveria Elegans", desc: "A classic rosette succulent, perfect for sunny spots.", price: 5.99, rating: 4.0, category: "succulents", tag: "best", image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=400&q=80" },
-    { id: 2, name: "Monstera Deliciosa", desc: "A bold tropical statement plant with iconic split leaves.", price: 24.99, rating: 4.8, category: "indoor", tag: "best", image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=400&q=80" },
-    { id: 3, name: "Snake Plant", desc: "Low maintenance and air-purifying, thrives almost anywhere.", price: 14.50, rating: 4.6, category: "indoor", tag: "new", image: "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?w=400&q=80" },
-    { id: 4, name: "Lavender Bush", desc: "Fragrant purple blooms perfect for an outdoor garden.", price: 9.99, rating: 4.3, category: "outdoor", tag: "sale", image: "https://images.unsplash.com/photo-1595239543301-e196a3a0f5ec?w=400&q=80" },
-    { id: 5, name: "Golden Pothos", desc: "A trailing vine that thrives in low light conditions.", price: 8.75, rating: 4.5, category: "indoor", tag: "best", image: "https://images.unsplash.com/photo-1622673037023-7f5c74f5e4f6?w=400&q=80" },
-    { id: 6, name: "Aloe Vera", desc: "A hardy succulent known for its soothing gel.", price: 6.50, rating: 4.2, category: "succulents", tag: "new", image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=400&q=80" },
-    { id: 7, name: "Rosemary Herb Pot", desc: "Aromatic herb for cooking, thrives outdoors in full sun.", price: 7.20, rating: 4.1, category: "outdoor", tag: "sale", image: "https://images.unsplash.com/photo-1524598171353-e13e2f4bf4a0?w=400&q=80" },
-    { id: 8, name: "Fiddle Leaf Fig", desc: "A striking indoor tree with large glossy leaves.", price: 32.00, rating: 4.7, category: "indoor", tag: "best", image: "https://images.unsplash.com/photo-1597055181449-b9d92bdd4c4b?w=400&q=80" },
-    { id: 9, name: "Haworthia Zebra", desc: "A compact striped succulent, ideal for small spaces.", price: 5.25, rating: 4.0, category: "succulents", tag: "new", image: "https://images.unsplash.com/photo-1509937528035-ad76254b0356?w=400&q=80" },
-    { id: 10, name: "Boston Fern", desc: "Lush feathery fronds that love humidity and shade.", price: 11.99, rating: 4.4, category: "outdoor", tag: "sale", image: "https://images.unsplash.com/photo-1463154545680-70ffcb2c3e18?w=400&q=80" },
-    { id: 11, name: "Peace Lily", desc: "Elegant white blooms and excellent air purification.", price: 15.75, rating: 4.6, category: "indoor", tag: "best", image: "https://images.unsplash.com/photo-1567689472102-eaa7e5f57c85?w=400&q=80" },
-    { id: 12, name: "Jade Plant", desc: "A symbol of good luck, easy-care and long-lived.", price: 6.99, rating: 4.3, category: "succulents", tag: "new", image: "https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?w=400&q=80" },
+    { id: 1, name: "Echeveria Elegans", desc: "A classic rosette succulent, perfect for sunny spots.", price: 5.99, rating: 4.0, category: "succulents", tag: "best", image: "../images/plants/catalog/echeveria-elegans.jpg" },
+    { id: 2, name: "Monstera Deliciosa", desc: "A bold tropical statement plant with iconic split leaves.", price: 24.99, rating: 4.8, category: "indoor", tag: "best", image: "../images/plants/catalog/monstera-deliciosa.jpg" },
+    { id: 3, name: "Snake Plant", desc: "Low maintenance and air-purifying, thrives almost anywhere.", price: 14.50, rating: 4.6, category: "indoor", tag: "new", image: "../images/plants/catalog/snake-plant.jpg" },
+    { id: 4, name: "Lavender Bush", desc: "Fragrant purple blooms perfect for an outdoor garden.", price: 9.99, rating: 4.3, category: "outdoor", tag: "sale", image: "../images/plants/catalog/lavender-bush.jpg" },
+    { id: 5, name: "Golden Pothos", desc: "A trailing vine that thrives in low light conditions.", price: 8.75, rating: 4.5, category: "indoor", tag: "best", image: "../images/plants/catalog/golden-pothos.jpg" },
+    { id: 6, name: "Aloe Vera", desc: "A hardy succulent known for its soothing gel.", price: 6.50, rating: 4.2, category: "succulents", tag: "new", image: "../images/plants/catalog/aloe-vera.jpg" },
+    { id: 7, name: "Rosemary Herb Pot", desc: "Aromatic herb for cooking, thrives outdoors in full sun.", price: 7.20, rating: 4.1, category: "herb", tag: "sale", image: "../images/plants/catalog/rosemary-herb.jpg" },
+    { id: 8, name: "Fiddle Leaf Fig", desc: "A striking indoor tree with large glossy leaves.", price: 32.00, rating: 4.7, category: "indoor", tag: "best", image: "../images/plants/catalog/fiddle-leaf-fig.jpg" },
+    { id: 9, name: "Haworthia Zebra", desc: "A compact striped succulent, ideal for small spaces.", price: 5.25, rating: 4.0, category: "succulents", tag: "new", image: "../images/plants/catalog/haworthia-zebra.jpg" },
+    { id: 10, name: "Boston Fern", desc: "Lush feathery fronds that love humidity and shade.", price: 11.99, rating: 4.4, category: "outdoor", tag: "sale", image: "../images/plants/catalog/boston-fern.jpg" },
+    { id: 11, name: "Peace Lily", desc: "Elegant white blooms and excellent air purification.", price: 15.75, rating: 4.6, category: "indoor", tag: "best", image: "../images/plants/catalog/peace-lily.jpg" },
+    { id: 12, name: "Jade Plant", desc: "A symbol of good luck, easy-care and long-lived.", price: 6.99, rating: 4.3, category: "succulents", tag: "new", image: "../images/plants/catalog/jade-plant.jpg" },
   ];
   
   const PAGE_SIZE = 4;
@@ -155,7 +155,7 @@ const products = [
   };
 
   const requestedFilter = new URLSearchParams(window.location.search).get("filter");
-  const validFilters = new Set(["all", "best", "new", "sale", "indoor", "outdoor", "succulents"]);
+  const validFilters = new Set(["all", "best", "new", "sale", "indoor", "outdoor", "succulents", "herb"]);
   if (validFilters.has(requestedFilter)) {
     state.filter = requestedFilter;
   }
