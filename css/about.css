@@ -88,14 +88,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 36px;
+  padding: var(--btn-pad-lg-y) var(--btn-pad-lg-x);
   background-color: var(--color-dark-green);
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: var(--text-button);
-  font-weight: 600;
+  font-size: var(--btn-font-lg);
+  font-weight: var(--btn-weight);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-decoration: none;
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-card);

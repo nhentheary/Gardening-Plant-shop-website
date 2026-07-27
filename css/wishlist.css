@@ -219,10 +219,10 @@
   background: var(--color-dark-green);
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: var(--text-button);
-  font-weight: 700;
+  font-size: var(--btn-font-sm);
+  font-weight: var(--btn-weight);
   border-radius: var(--radius-full);
-  padding: 12px 20px;
+  padding: var(--btn-pad-sm-y) var(--btn-pad-sm-x);
   transition: background 0.2s;
   margin-top: auto;
 }

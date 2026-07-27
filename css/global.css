@@ -654,3 +654,39 @@
     .navbar-logo-icon { height: 34px; }
     .navbar-icons { gap: 10px; }
     }
+
+/* ══════════════════════════════
+   SHARED BUTTON SYSTEM
+   Use these for any NEW button instead of writing custom padding/font-size.
+   Existing page-specific classes (.btn-pill-filled, .btn-auth, etc.) now
+   pull their sizing from the tokens in variables.css so every button on
+   every page uses the same 3-size scale instead of one-off pixel values.
+   ══════════════════════════════ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-weight: var(--btn-weight);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    box-sizing: border-box;
+}
+
+.btn-sm { padding: var(--btn-pad-sm-y) var(--btn-pad-sm-x); font-size: var(--btn-font-sm); }
+.btn-md { padding: var(--btn-pad-md-y) var(--btn-pad-md-x); font-size: var(--btn-font-md); }
+.btn-lg { padding: var(--btn-pad-lg-y) var(--btn-pad-lg-x); font-size: var(--btn-font-lg); }
+
+.btn-fill-dark   { background: var(--color-dark-green); color: var(--color-white); }
+.btn-fill-dark:hover  { background: var(--color-deep-dark); }
+
+.btn-outline-dark { background: transparent; color: var(--color-dark-green); border: 2px solid var(--color-dark-green); }
+.btn-outline-dark:hover { background: var(--color-green-tint); }
+
+.btn:active  { transform: scale(0.98); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }

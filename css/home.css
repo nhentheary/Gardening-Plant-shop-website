@@ -7,11 +7,11 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 12px 28px;
+    padding: var(--btn-pad-md-y) var(--btn-pad-md-x);
     border-radius: var(--radius-full);
     font-family: var(--font-body);
-    font-size: var(--text-button);
-    font-weight: 700;
+    font-size: var(--btn-font-md);
+    font-weight: var(--btn-weight);
     cursor: pointer;
     transition: all 0.2s;
     text-decoration: none;
@@ -42,8 +42,8 @@
 .btn-pill-filled-sm {
     background: var(--color-dark-green);
     color: var(--color-white);
-    padding: 8px 20px;
-    font-size: 13px;
+    padding: var(--btn-pad-sm-y) var(--btn-pad-sm-x);
+    font-size: var(--btn-font-sm);
 }
 
 .btn-pill-filled-sm:hover {
@@ -63,11 +63,11 @@
 .btn-pill-dark {
     background: var(--color-deep-dark);
     color: var(--color-white);
-    padding: 12px 28px;
+    padding: var(--btn-pad-md-y) var(--btn-pad-md-x);
     border-radius: var(--radius-full);
     font-family: var(--font-body);
-    font-size: var(--text-button);
-    font-weight: 700;
+    font-size: var(--btn-font-md);
+    font-weight: var(--btn-weight);
     border: none;
     cursor: pointer;
     transition: background 0.2s;
@@ -473,11 +473,11 @@
     align-items: center;
     background-color: var(--color-dark-green);
     color: var(--color-white);
-    padding: 11px 26px;
-    font-size: 13.5px;
-    font-weight: 600;
+    padding: var(--btn-pad-sm-y) var(--btn-pad-sm-x);
+    font-size: var(--btn-font-sm);
+    font-weight: var(--btn-weight);
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: var(--radius-full);
     transition: background-color 0.2s ease;
 }
 
@@ -697,8 +697,8 @@
     border: none;
     border-radius: var(--radius-md);
     font-family: var(--font-body);
-    font-size: 13px;
-    font-weight: 700;
+    font-size: var(--btn-font-sm);
+    font-weight: var(--btn-weight);
     cursor: pointer;
     display: flex;
     align-items: center;

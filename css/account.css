@@ -225,11 +225,11 @@
   background: var(--color-dark-green);
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: var(--text-button);
-  font-weight: 700;
+  font-size: var(--btn-font-md);
+  font-weight: var(--btn-weight);
   border: none;
   border-radius: var(--radius-full);
-  padding: 12px 28px;
+  padding: var(--btn-pad-md-y) var(--btn-pad-md-x);
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -622,9 +622,9 @@
   background: var(--color-danger);
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: var(--text-button);
-  font-weight: 700;
-  padding: 12px 24px;
+  font-size: var(--btn-font-md);
+  font-weight: var(--btn-weight);
+  padding: var(--btn-pad-md-y) var(--btn-pad-md-x);
   border-radius: var(--radius-full);
   transition: opacity 0.2s;
 }

@@ -418,8 +418,8 @@
   border: none;
   border-radius: var(--radius-md);
   font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--btn-font-md);
+  font-weight: var(--btn-weight);
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
   display: flex;

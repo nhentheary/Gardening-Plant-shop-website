@@ -51,6 +51,12 @@
   --radius-lg:   12px;
   --radius-full: 999px;
 
+  /* ── BUTTONS (shared scale — reuse these instead of one-off padding/font-size) ── */
+  --btn-pad-sm-y: 8px;   --btn-pad-sm-x: 20px;  --btn-font-sm: 13px;
+  --btn-pad-md-y: 11px;  --btn-pad-md-x: 26px;  --btn-font-md: 14px;
+  --btn-pad-lg-y: 13px;  --btn-pad-lg-x: 32px;  --btn-font-lg: 15px;
+  --btn-weight: 600;
+
   /* ── SHADOWS ── */
   --shadow-card:  0 2px 12px rgba(43,52,36,0.08);
   --shadow-modal: 0 8px 32px rgba(43,52,36,0.2);
